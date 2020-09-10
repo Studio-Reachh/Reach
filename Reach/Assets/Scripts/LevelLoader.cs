@@ -6,35 +6,31 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
+    public string GetNextScene;
     public float transitionTime = 1f;
-    public string scenePath;
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            LoadNextLevel();
-        }
+        LoadNextLevel();
     }
 
     public void LoadNextLevel()
     {
-        if(scenePath != string.Empty)
+        if(GetNextScene != string.Empty)
         {
-            StartCoroutine(LoadLevel(scenePath));
+            StartCoroutine(LoadLevel(GetNextScene));
         }
     }
 
-    IEnumerator LoadLevel(string levelIndex)
+    IEnumerator LoadLevel(string level)
     {
-        //play animation
+        //Trigger scene transition
         transition.SetTrigger("Start");
 
         //Wait
         yield return new WaitForSeconds(transitionTime);
 
-        //Load scene
-        SceneManager.LoadScene(levelIndex);
+        //Load Scene
+        SceneManager.LoadScene(level);
     }
 }
