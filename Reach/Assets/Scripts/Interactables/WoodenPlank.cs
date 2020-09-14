@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WoodenPlank : Interactable
 {
@@ -9,6 +10,14 @@ public class WoodenPlank : Interactable
     private void Awake()
     {
         _itemToPickup = Resources.Load<Item>("ScriptableObjects/WoodenPlank");
+
+        if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, name, "PickedUp", out bool isPickedUp))
+        {
+            if (isPickedUp)
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     public override bool Interact(Item item)
@@ -19,6 +28,8 @@ public class WoodenPlank : Interactable
         {
             Inventory.AddItem(_itemToPickup);
             successfulInteraction = true;
+
+            SaveHandler.SaveLevel(name, "PickedUp", true);
         }
 
         return successfulInteraction;

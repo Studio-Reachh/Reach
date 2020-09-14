@@ -56,7 +56,13 @@ public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void AddItem(Item item)
     {
         Item = item;
-        _imageElementForItem.sprite = item.Image;
+        SaveHandler.SaveInventory();
+    }
+
+    public void RemoveItem()
+    {
+        Item = null;
+        SaveHandler.SaveInventory();
     }
 
     private void DragItem()
@@ -113,7 +119,7 @@ public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (itemsSuccessfulyUsedForInteraction && Item.DestroyOnSuccessfulUse)
         {
-            Item = null;
+            RemoveItem();
         }
 
         StopDragItem();
