@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door : Interactable
 {
     private LevelLoader _levelLoader;
     public string LevelName;
+
+    public override bool Interact(Item item)
+    {
+        throw new System.NotImplementedException();
+    }
 
     private void Awake()
     {
@@ -17,6 +22,7 @@ public class Door : MonoBehaviour
         if(LevelName != string.Empty)
         {
             _levelLoader.LoadNextLevel(LevelName);
+            Interact(null);
         }
     }
 }
