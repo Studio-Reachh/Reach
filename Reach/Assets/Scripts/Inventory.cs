@@ -13,6 +13,29 @@ public class Inventory : MonoBehaviour
         ItemSlots = GetComponentsInChildren<ItemSlot>().ToList();
     }
 
+    private void Start()
+    {
+        List<Item> listItemsFromSaveFile = SaveHandler.GetSavedItemsForInventory();
+        foreach (Item item in listItemsFromSaveFile)
+        {
+            AddItem(item);
+        }
+    }
+
+    public static List<Item> GetCurrentItems()
+    {
+        List<Item> currentItems = new List<Item>();
+        foreach (ItemSlot itemSlot in ItemSlots)
+        {
+            if (itemSlot.Item)
+            {
+                currentItems.Add(itemSlot.Item);
+            }
+        }
+
+        return currentItems;
+    }
+
     public static void AddItem(Item item)
     {
         int indexOfEmptyItemSlot = -1;
