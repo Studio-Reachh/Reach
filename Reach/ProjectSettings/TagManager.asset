@@ -7,6 +7,7 @@ TagManager:
   - SceneSwitch
   - Crossfade
   - Background
+  - MorsecodeMachine
   layers:
   - Default
   - TransparentFX
