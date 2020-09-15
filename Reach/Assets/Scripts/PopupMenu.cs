@@ -1,22 +1,24 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class PopupMenu : MonoBehaviour
 {
     public GameObject popupMenuUI;
-
+    protected bool isPopupOpen;
     public void Awake()
     {
         popupMenuUI.SetActive(false);
     }
-    public void OpenPopupMenu()
+    public virtual void OpenPopupMenu()
     {
         popupMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+      
+        isPopupOpen = true;
     }
-    public void ClosePopupMenu()
+    public virtual void ClosePopupMenu()
     {
         popupMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        isPopupOpen = false;
     }
-
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PopupButton : MonoBehaviour
 {
-    public PopupMenu _popupMenu;
+    public PopupMenu PopupMenu;
 
     private void OnMouseDown()
     {
-        _popupMenu.OpenPopupMenu();
+        PopupMenu.OpenPopupMenu();
     }
 }
