@@ -1,22 +1,26 @@
 ﻿using UnityEngine;
+using System.Collections;
 
-public class PopupMenu : MonoBehaviour
+public abstract class PopupMenu : MonoBehaviour
 {
     public GameObject popupMenuUI;
-
-    public void Awake()
+    protected bool isPopupOpen;
+    private GameObject _inventory;
+    public virtual void Awake()
     {
         popupMenuUI.SetActive(false);
+        _inventory = GameObject.Find("Inventory[canvas]");
     }
-    public void OpenPopupMenu()
+    public virtual void OpenPopupMenu()
     {
         popupMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        isPopupOpen = true;
+        _inventory.SetActive(false);
     }
-    public void ClosePopupMenu()
+    public virtual void ClosePopupMenu()
     {
         popupMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        isPopupOpen = false;
+        _inventory.SetActive(true);
     }
-
 }
