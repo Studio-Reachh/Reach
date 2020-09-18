@@ -7,22 +7,19 @@ public class Door : Interactable
     private LevelLoader _levelLoader;
     public string LevelName;
 
-    public override bool Interact(Item item)
-    {
-        throw new System.NotImplementedException();
-    }
-
     private void Awake()
     {
         _levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
     }
 
-    private void OnMouseDown()
+    public override bool Interact(Item item)
     {
-        if(LevelName != string.Empty)
+        if (item == null && !string.IsNullOrEmpty(LevelName))
         {
             _levelLoader.LoadNextLevel(LevelName);
-            Interact(null);
+            return true;
         }
+
+        return false;
     }
 }

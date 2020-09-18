@@ -99,6 +99,7 @@ public class SaveHandler : MonoBehaviour
         bool valueExists = false;
         if (!string.IsNullOrEmpty(savedDataJson))
         {
+            //(T)Convert.ChangeType(currentValue,typeof(T));
             Dictionary<string, object> dicSavedDataForLevel = JsonConvert.DeserializeObject<Dictionary<string, object>>(savedDataJson);
 
             if (dicSavedDataForLevel.ContainsKey(keyOfValueToRetrieve))

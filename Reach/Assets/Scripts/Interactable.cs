@@ -4,6 +4,11 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
+    private void Awake()
+    {
+        this.gameObject.layer = LayerMask.GetMask("Interactable");
+    }
+
     /// <summary>
     /// Interact with the Interactable
     /// </summary>
@@ -20,7 +25,7 @@ public abstract class Interactable : MonoBehaviour
 
         if (rayHitInfo)
         {
-            foundInteractable = rayHitInfo.transform.root.GetComponent<Interactable>();//TODO: Maybe GetComponentsInChildren, for now look for the interactable in the root of the GameObject
+            foundInteractable = rayHitInfo.transform.GetComponent<Interactable>();//TODO: Maybe GetComponentsInChildren, for now look for the interactable in the root of the GameObject
         }
 
         return foundInteractable;
