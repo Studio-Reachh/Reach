@@ -38,19 +38,34 @@ public class MorsecodeMachinePopup : PopupMenu
 
     private bool _morsecodeSolved, _messageReceived = false;
 
+    private IEnumerator MorsecodeCoroutine, WriteMessageCoroutine;
+
     public void Start()
     {
+        MorsecodeCoroutine = PlayMorsecodeMessage();
+        WriteMessageCoroutine = WritingMessage(UITextReceive, MorsecodeReceivedMessage, TypeSpeed, MorsecodeReceivedPauseDuration, 0);
+
         if (SaveHandler.GetValueByProperty("Room02", "MorsecodeMachine[canvas]", "MorsecodeSend", out bool morsecodeSolved))
         {
             _morsecodeSolved = morsecodeSolved;
         }
     }
 
+    public override void ClosePopupMenu()
+    {
+        base.ClosePopupMenu();
+
+        //Stop writing message when popup is closed
+        StopCoroutine(WriteMessageCoroutine);
+    }
+
     public override void OpenPopupMenu()
     {
         base.OpenPopupMenu();
 
-        if(isPopupOpen && MorsecodeMachine.isMachineActive)
+        StopCoroutine(MorsecodeCoroutine);
+
+        if (isPopupOpen && MorsecodeMachine.isMachineActive)
         {
             ActivateScreens();
         }
@@ -64,10 +79,12 @@ public class MorsecodeMachinePopup : PopupMenu
         {
             if (!_messageReceived)
             {
-                StartCoroutine(WritingMessage(UITextReceive, MorsecodeReceivedMessage, TypeSpeed, MorsecodeReceivedPauseDuration, 0));
+                StartCoroutine(WriteMessageCoroutine);
             } else
             {
-                StartCoroutine(PlayMorsecodeMessage());
+                //When opening popup again restart coroutine
+                StopCoroutine(MorsecodeCoroutine);
+                StartCoroutine(MorsecodeCoroutine);
             }
         }
 
@@ -162,7 +179,7 @@ public class MorsecodeMachinePopup : PopupMenu
             UITextSend.text = EndMessage;
 
             _morsecodeSolved = true;
-            StopCoroutine(PlayMorsecodeMessage());
+            StopCoroutine(MorsecodeCoroutine);
 
             //safe game progress
             SaveHandler.SaveLevel(this.name, "MorsecodeSend", true);
@@ -189,7 +206,7 @@ public class MorsecodeMachinePopup : PopupMenu
             _messageReceived = true;
             yield return new WaitForSeconds(messagePause);
 
-            StartCoroutine(PlayMorsecodeMessage());
+            StartCoroutine(MorsecodeCoroutine);
         }
     }
 }
