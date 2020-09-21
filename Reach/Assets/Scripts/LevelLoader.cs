@@ -1,25 +1,52 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class LevelLoader : MonoBehaviour
 {
-    public Animator transition;
+    [Header("Transition")]
+    public Animator Crossfade;
+    public VideoPlayer Cutscene;
+    public GameObject VideoplayerCanvas;
     public float transitionTime = 1f;
 
-    public void LoadNextLevel(string sceneName)
+    public void Awake()
     {
-        StartCoroutine(LoadLevel(sceneName));
+        if (VideoplayerCanvas)
+        {
+            VideoplayerCanvas.SetActive(false);
+        }
+    }
+    public void LoadNextLevel(string sceneName, bool PlayCutscene)
+    {
+        if(Cutscene && PlayCutscene)
+        {
+            StartCoroutine(PlayCutSceneBeforeLoadingLevel(sceneName));
+        } else
+        {
+            StartCoroutine(LoadLevel(sceneName));
+        }
     }
 
     IEnumerator LoadLevel(string level)
     {
         //Trigger scene transition
-        transition.SetTrigger("Start");
+        Crossfade.SetTrigger("Start");
 
         //Wait
         yield return new WaitForSeconds(transitionTime);
+
+        //Load Scene
+        SceneManager.LoadScene(level);
+    }
+
+    IEnumerator PlayCutSceneBeforeLoadingLevel(string level)
+    {
+        VideoplayerCanvas.SetActive(true);
+        Cutscene.Play();
+
+        yield return new WaitForSeconds(10);
 
         //Load Scene
         SceneManager.LoadScene(level);

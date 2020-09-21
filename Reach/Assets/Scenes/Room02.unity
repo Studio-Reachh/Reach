@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 788764406767137193, guid: 75093d6471b75514ab85b6285261833a, type: 3}
+      propertyPath: Crossfade
+      value: 
+      objectReference: {fileID: 1502923658}
     - target: {fileID: 3085736429627158934, guid: 75093d6471b75514ab85b6285261833a, type: 3}
       propertyPath: m_Alpha
       value: 0
@@ -315,7 +319,7 @@ GameObject:
   - component: {fileID: 208577647}
   - component: {fileID: 208577646}
   - component: {fileID: 208577645}
-  - component: {fileID: 208577648}
+  - component: {fileID: 208577649}
   m_Layer: 0
   m_Name: FixedPipe
   m_TagString: Untagged
@@ -414,7 +418,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &208577648
+--- !u!114 &208577649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -423,10 +427,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 208577644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44b3a370730712442887fed9f0e65f56, type: 3}
+  m_Script: {fileID: 11500000, guid: 68a881785b75ef14cb04946f01d8b107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pipeSpriteRenderer: {fileID: 352810104}
+  _spriteRenderer: {fileID: 352810104}
+  ItemSaveProperty: HasPipe
+  ItemNeeded: {fileID: 11400000, guid: f6ae0d2b5fe8c004d84c4a0f19d7041e, type: 2}
+  changeSprite: 0
+  sprite: {fileID: 0}
 --- !u!1 &262534479
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,9 +603,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 352810103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e65428fe0ae6067459f316784970ff42, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b993cd0a980a3d4c9a8c178729e6b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ItemName: LoosePipe
+  ItemProperty: PickedUp
 --- !u!61 &352810107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1003,6 +1013,10 @@ PrefabInstance:
     - target: {fileID: 505959511389971647, guid: 9a401d2f0a518e646a4d34ae07ec531b, type: 3}
       propertyPath: KeyProperty
       value: MorsecodeSend
+      objectReference: {fileID: 0}
+    - target: {fileID: 505959511389971647, guid: 9a401d2f0a518e646a4d34ae07ec531b, type: 3}
+      propertyPath: PlayCutscene
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a401d2f0a518e646a4d34ae07ec531b, type: 3}
@@ -2081,6 +2095,11 @@ Transform:
   m_Father: {fileID: 1783171057}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1502923658 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3085736429627158937, guid: 75093d6471b75514ab85b6285261833a, type: 3}
+  m_PrefabInstance: {fileID: 24871662}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1541587864
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,27 +3084,15 @@ GameObject:
   m_Component:
   - component: {fileID: 2080487922}
   - component: {fileID: 2080487921}
-  - component: {fileID: 2080487920}
   - component: {fileID: 2080487923}
+  - component: {fileID: 2080487924}
   m_Layer: 0
-  m_Name: OarWithHooks
+  m_Name: Oar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2080487920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080487919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad45b8452db63b7489f5921a3bc25555, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &2080487921
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3177,6 +3184,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.46839, y: 0.9110341}
   m_EdgeRadius: 0
+--- !u!114 &2080487924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080487919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b993cd0a980a3d4c9a8c178729e6b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemName: Oar
+  ItemProperty: PickedUp
 --- !u!1001 &1970519226811274999
 PrefabInstance:
   m_ObjectHideFlags: 0
