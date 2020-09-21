@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: e2bcae6d8c333fd4d81e8d73b7953a78
   - enabled: 1
     path: Assets/Scenes/Island 1/Room03.unity
-    guid: 18b66c3d9f9314b4e8d73c59f1bb9130
+    guid: cdc67f3672863594c9288d9d744e89a0
   - enabled: 1
     path: Assets/Scenes/Island 1/Room04.unity
     guid: 8082950512083e84d867afe132c62c13

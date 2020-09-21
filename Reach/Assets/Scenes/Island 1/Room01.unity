@@ -4957,6 +4957,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 788764406767137193, guid: 75093d6471b75514ab85b6285261833a, type: 3}
+      propertyPath: Crossfade
+      value: 
+      objectReference: {fileID: 664212767}
     - target: {fileID: 3085736429627158934, guid: 75093d6471b75514ab85b6285261833a, type: 3}
       propertyPath: m_Alpha
       value: 0
@@ -5109,6 +5113,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseGrabAnimOnInteract: 0
   LevelName: Room02
+  IsDoorLocked: 0
+  KeyGameobject: 
+  KeyProperty: 
+  PlayCutscene: 0
 --- !u!61 &343522592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5171,7 +5179,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &460867776y
+--- !u!1 &460867776
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5433,6 +5441,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &664212767 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3085736429627158937, guid: 75093d6471b75514ab85b6285261833a, type: 3}
+  m_PrefabInstance: {fileID: 340866448}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &821479206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6428,8 +6441,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2128164519}
   - component: {fileID: 2128164520}
-  - component: {fileID: 2128164521}
   - component: {fileID: 2128164522}
+  - component: {fileID: 2128164523}
   m_Layer: 9
   m_Name: Island01_Room01_Plank
   m_TagString: Untagged
@@ -6502,19 +6515,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2128164521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128164518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce50e8f3bf73e27429f69245f4e889d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseGrabAnimOnInteract: 1
 --- !u!61 &2128164522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6541,6 +6541,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.65, y: 1.7372303}
   m_EdgeRadius: 0
+--- !u!114 &2128164523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128164518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b993cd0a980a3d4c9a8c178729e6b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseGrabAnimOnInteract: 1
+  Item: {fileID: 11400000, guid: ede103c4d375312409eafde417ac1fa2, type: 2}
+  ItemProperty: PickedUp
 --- !u!1 &2147150218
 GameObject:
   m_ObjectHideFlags: 0

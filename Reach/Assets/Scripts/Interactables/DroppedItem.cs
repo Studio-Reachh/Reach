@@ -3,17 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class DroppedItem : Interactable
 {
-    private Item _itemToPickup;
-
     [Header("Item to pick up")]
-    public string ItemName;
+    public Item Item;
     public string ItemProperty;
 
     private void Awake()
     {
-        _itemToPickup = Resources.Load<Item>("ScriptableObjects/" + ItemName);
-
-        if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, ItemName, ItemProperty, out bool isPickedup))
+        if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, name, ItemProperty, out bool isPickedup))
         {
             if (isPickedup)
             {
@@ -26,21 +22,15 @@ public class DroppedItem : Interactable
     {
         bool successfulInteraction = false;
 
-        if (_itemToPickup)
+        if (Item)
         {
-            Inventory.AddItem(_itemToPickup);
+            Inventory.AddItem(Item);
             successfulInteraction = true;
 
-            SaveHandler.SaveLevel(ItemName, ItemProperty, true);
+            SaveHandler.SaveLevel(name, ItemProperty, true);
+            Destroy(this.gameObject);
         }
 
         return successfulInteraction;
-    }
-    private void OnMouseDown()
-    {
-        if (Interact(null))
-        {
-            Destroy(this.gameObject);
-        }
     }
 }

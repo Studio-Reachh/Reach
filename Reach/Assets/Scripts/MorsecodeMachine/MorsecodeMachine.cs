@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MorsecodeMachine : MonoBehaviour
@@ -14,11 +12,14 @@ public class MorsecodeMachine : MonoBehaviour
 
     public void Update()
     {
-        //check if previous puzzels have been solved before unlocking machine | ceiling has a typo
-        if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, "FixedPipe", "HasPipe", out bool hasPipe) &&
-            SaveHandler.GetValueByProperty("Room01", "CeilingHole", "HasPlank", out bool hasPlank))
+        if (!isMachineActive)
         {
-            ActivateMachine();
+            //check if previous puzzels have been solved before unlocking machine | ceiling has a typo
+            if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, "FixedPipe", "HasPipe", out bool hasPipe) &&
+                SaveHandler.GetValueByProperty("Room01", "CeillingHole (Empty GO)", "HasPlank", out bool hasPlank))
+            {
+                ActivateMachine();
+            }
         }
     }
 
