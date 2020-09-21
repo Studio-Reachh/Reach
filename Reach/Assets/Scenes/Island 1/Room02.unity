@@ -1305,7 +1305,7 @@ MonoBehaviour:
   MorsecodeReceivedMessage: -..  .      -- .      ...---...  (This is from      
     me       S.O.S.)
   MorsecodeReceivedPauseDuration: 5
-  MorsecodeSendMessage: -.-
+  MorsecodeSendMessage: ---.-.
   MorsecodeSendPauseDuration: 1
   DotDuration: 0.5
   DashDuration: 2.5
