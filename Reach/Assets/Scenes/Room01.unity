@@ -4942,6 +4942,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 788764406767137193, guid: 75093d6471b75514ab85b6285261833a, type: 3}
+      propertyPath: Crossfade
+      value: 
+      objectReference: {fileID: 2058700328}
     - target: {fileID: 3085736429627158934, guid: 75093d6471b75514ab85b6285261833a, type: 3}
       propertyPath: m_Alpha
       value: 0
@@ -6006,6 +6010,11 @@ Transform:
   m_Father: {fileID: 376051611}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2058700328 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3085736429627158937, guid: 75093d6471b75514ab85b6285261833a, type: 3}
+  m_PrefabInstance: {fileID: 340866448}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2147150218
 GameObject:
   m_ObjectHideFlags: 0

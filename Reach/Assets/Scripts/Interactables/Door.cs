@@ -13,6 +13,9 @@ public class Door : Interactable
     public string KeyGameobject;
     public string KeyProperty;
 
+    [Header("Play Cutscene")]
+    public bool PlayCutscene;
+
     private void Awake()
     {
         _levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
@@ -31,7 +34,7 @@ public class Door : Interactable
             {
                 if (LevelName != string.Empty)
                 {
-                    _levelLoader.LoadNextLevel(LevelName);
+                    _levelLoader.LoadNextLevel(LevelName, PlayCutscene);
                     Interact(null);
                 }
             }
@@ -39,7 +42,7 @@ public class Door : Interactable
         {
             if (LevelName != string.Empty)
             {
-                _levelLoader.LoadNextLevel(LevelName);
+                _levelLoader.LoadNextLevel(LevelName, PlayCutscene);
                 Interact(null);
             }
         }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b6ea22f9b791d4da3a1c53e2fa16bc, type: 3}
   m_Name: LoosePipe
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: a1a49d21580f05e4e86d668fdaa828e7, type: 3}
+  Image: {fileID: 21300000, guid: 2f796cad93922ef4ebbd4139b91b3d77, type: 3}
   DestroyOnSuccessfulUse: 1

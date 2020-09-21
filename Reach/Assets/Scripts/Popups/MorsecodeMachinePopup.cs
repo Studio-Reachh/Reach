@@ -38,11 +38,10 @@ public class MorsecodeMachinePopup : PopupMenu
 
     private bool _morsecodeSolved, _messageReceived = false;
 
-    private IEnumerator MorsecodeCoroutine, WriteMessageCoroutine;
+    private IEnumerator WriteMessageCoroutine;
 
     public void Start()
     {
-        MorsecodeCoroutine = PlayMorsecodeMessage();
         WriteMessageCoroutine = WritingMessage(UITextReceive, MorsecodeReceivedMessage, TypeSpeed, MorsecodeReceivedPauseDuration, 0);
 
         if (SaveHandler.GetValueByProperty("Room02", "MorsecodeMachine[canvas]", "MorsecodeSend", out bool morsecodeSolved))
@@ -63,8 +62,6 @@ public class MorsecodeMachinePopup : PopupMenu
     {
         base.OpenPopupMenu();
 
-        StopCoroutine(MorsecodeCoroutine);
-
         if (isPopupOpen && MorsecodeMachine.isMachineActive)
         {
             ActivateScreens();
@@ -80,11 +77,6 @@ public class MorsecodeMachinePopup : PopupMenu
             if (!_messageReceived)
             {
                 StartCoroutine(WriteMessageCoroutine);
-            } else
-            {
-                //When opening popup again restart coroutine
-                StopCoroutine(MorsecodeCoroutine);
-                StartCoroutine(MorsecodeCoroutine);
             }
         }
 
@@ -98,34 +90,34 @@ public class MorsecodeMachinePopup : PopupMenu
         }
     }
 
-    public IEnumerator PlayMorsecodeMessage()
-    {
-        while (!_morsecodeSolved)
-        {
-            foreach (var letter in MorsecodeSendMessage)
-            {
-                switch (letter)
-                {
-                    case '.':
-                        Vibration.CreateOneShot(500);
-                        StartCoroutine(CameraShake.Shake(DotDuration, MagnitudeShake));
-                        yield return new WaitForSeconds(1.50f);
-                        break;
+    //public IEnumerator PlayMorsecodeMessage()
+    //{
+    //    while (!_morsecodeSolved)
+    //    {
+    //        foreach (var letter in MorsecodeSendMessage)
+    //        {
+    //            switch (letter)
+    //            {
+    //                case '.':
+    //                    Vibration.CreateOneShot(500);
+    //                    StartCoroutine(CameraShake.Shake(DotDuration, MagnitudeShake));
+    //                    yield return new WaitForSeconds(1.50f);
+    //                    break;
 
-                    case '-':
-                        Vibration.CreateOneShot(2500);
-                        StartCoroutine(CameraShake.Shake(DashDuration, MagnitudeShake));
-                        yield return new WaitForSeconds(3.50f);
-                        break;
+    //                case '-':
+    //                    Vibration.CreateOneShot(2500);
+    //                    StartCoroutine(CameraShake.Shake(DashDuration, MagnitudeShake));
+    //                    yield return new WaitForSeconds(3.50f);
+    //                    break;
 
-                    case ' ':
-                        yield return new WaitForSeconds(1);
-                        break;
-                }
-            }
-            yield return new WaitForSeconds(10);
-        }
-    }
+    //                case ' ':
+    //                    yield return new WaitForSeconds(1);
+    //                    break;
+    //            }
+    //        }
+    //        yield return new WaitForSeconds(10);
+    //    }
+    //}
 
     public void KeyerInput()
     {
@@ -179,7 +171,6 @@ public class MorsecodeMachinePopup : PopupMenu
             UITextSend.text = EndMessage;
 
             _morsecodeSolved = true;
-            StopCoroutine(MorsecodeCoroutine);
 
             //safe game progress
             SaveHandler.SaveLevel(this.name, "MorsecodeSend", true);
@@ -205,8 +196,6 @@ public class MorsecodeMachinePopup : PopupMenu
 
             _messageReceived = true;
             yield return new WaitForSeconds(messagePause);
-
-            StartCoroutine(MorsecodeCoroutine);
         }
     }
 }
