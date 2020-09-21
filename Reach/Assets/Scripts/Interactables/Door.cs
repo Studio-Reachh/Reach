@@ -23,28 +23,28 @@ public class Door : Interactable
 
     public override bool Interact(Item item)
     {
-        return true;
-    }
+        bool succesfullInteraction = false;
 
-    private void OnMouseDown()
-    {
         if (IsDoorLocked)
         {
-            if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, KeyGameobject, KeyProperty, out bool isUnlocked ))
+            if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, KeyGameobject, KeyProperty, out bool isUnlocked))
             {
                 if (LevelName != string.Empty)
                 {
                     _levelLoader.LoadNextLevel(LevelName, PlayCutscene);
-                    Interact(null);
+                    succesfullInteraction = true;
                 }
             }
-        } else
+        }
+        else
         {
             if (LevelName != string.Empty)
             {
                 _levelLoader.LoadNextLevel(LevelName, PlayCutscene);
-                Interact(null);
+                succesfullInteraction = true;
             }
         }
+
+        return succesfullInteraction;
     }
 }

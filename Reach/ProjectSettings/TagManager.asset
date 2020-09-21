@@ -17,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Obstacle
+  - Interactable
+  - ParticleCollision
   - 
   - 
   - 

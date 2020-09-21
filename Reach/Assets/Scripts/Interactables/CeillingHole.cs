@@ -8,6 +8,9 @@ public class CeillingHole : Interactable
     [SerializeField]
     private SpriteRenderer _plankSpriteRenderer;
 
+    [SerializeField]
+    private ParticleSystem _particleSystem;
+
     private bool _hasPlank = false;
 
     void Awake()
@@ -15,18 +18,25 @@ public class CeillingHole : Interactable
         if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, name, "HasPlank", out bool hasPlank))
         {
             _hasPlank = hasPlank;
-            AddPlank();
+            if (_hasPlank)
+            {
+                AddPlank();
+            }
+            else
+            {
+                _particleSystem.gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            _particleSystem.gameObject.SetActive(true);
         }
     }
 
     private void AddPlank()
     {
         _plankSpriteRenderer.enabled = true;
-        ParticleSystem particleSystem = GetComponentInChildren<ParticleSystem>();
-        if (particleSystem)
-        {
-            particleSystem.Stop();
-        }
+        _particleSystem.Stop();
     }
 
     public override bool Interact(Item item)

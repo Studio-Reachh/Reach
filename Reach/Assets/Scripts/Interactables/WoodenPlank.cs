@@ -10,7 +10,6 @@ public class WoodenPlank : Interactable
     private void Awake()
     {
         _itemToPickup = Resources.Load<Item>("ScriptableObjects/WoodenPlank");
-
         if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, name, "PickedUp", out bool isPickedUp))
         {
             if (isPickedUp)
@@ -30,16 +29,9 @@ public class WoodenPlank : Interactable
             successfulInteraction = true;
 
             SaveHandler.SaveLevel(name, "PickedUp", true);
+            Destroy(this.gameObject);
         }
 
         return successfulInteraction;
-    }
-
-    private void OnMouseDown()
-    {
-        if (Interact(null))
-        {
-            Destroy(this.gameObject);
-        }
     }
 }
