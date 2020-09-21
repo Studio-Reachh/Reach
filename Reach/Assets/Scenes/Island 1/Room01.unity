@@ -123,7 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
 --- !u!1 &328156307
+=======
+--- !u!1 &126009008
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,18 +135,83 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   - component: {fileID: 328156308}
   - component: {fileID: 328156310}
   - component: {fileID: 328156309}
   - component: {fileID: 328156311}
   m_Layer: 9
   m_Name: Rain (ParticleSystem)
+=======
+  - component: {fileID: 126009010}
+  - component: {fileID: 126009009}
+  - component: {fileID: 126009011}
+  - component: {fileID: 126009012}
+  m_Layer: 0
+  m_Name: CeilingHole
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_IsActive: 0
 --- !u!4 &328156308
+=======
+  m_IsActive: 1
+--- !u!212 &126009009
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126009008}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 72e393922db9bea48ae595d163a9b485, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.02, y: 1.24}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &126009010
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4936,12 +5005,18 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
 --- !u!114 &328156311
 MonoBehaviour:
+=======
+--- !u!4 &180691947
+Transform:
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_GameObject: {fileID: 328156307}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5012,6 +5087,17 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75093d6471b75514ab85b6285261833a, type: 3}
 --- !u!1 &343522588
+=======
+  m_GameObject: {fileID: 180691944}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: -0.378, y: -0.106, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 126009010}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!1 &405116983
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5019,17 +5105,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   - component: {fileID: 343522589}
   - component: {fileID: 343522590}
   - component: {fileID: 343522591}
   - component: {fileID: 343522592}
   m_Layer: 9
   m_Name: Island01_Room01_Ladder
+=======
+  - component: {fileID: 405116985}
+  - component: {fileID: 405116984}
+  m_Layer: 0
+  m_Name: Room01_BG
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
 --- !u!4 &343522589
 Transform:
   m_ObjectHideFlags: 0
@@ -5045,6 +5139,9 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &343522590
+=======
+--- !u!212 &405116984
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5171,7 +5268,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
 --- !u!1 &460867776
+=======
+--- !u!1 &937930080
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5179,21 +5280,102 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   - component: {fileID: 460867777}
   - component: {fileID: 460867778}
   m_Layer: 0
   m_Name: Island01_Room01_Pot
+=======
+  - component: {fileID: 937930083}
+  - component: {fileID: 937930082}
+  - component: {fileID: 937930081}
+  m_Layer: 0
+  m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &460867777
+--- !u!114 &937930081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937930080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &937930082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937930080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &937930083
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937930080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &957203693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 957203697}
+  - component: {fileID: 957203694}
+  - component: {fileID: 957203696}
+  - component: {fileID: 957203695}
+  m_Layer: 0
+  m_Name: LoosePipe
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
+--- !u!4 &460867777
+Transform:
+=======
+--- !u!212 &957203694
+SpriteRenderer:
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_GameObject: {fileID: 460867776}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.07, y: -2.2, z: -1.32}
@@ -5867,6 +6049,137 @@ BoxCollider2D:
   m_Size: {x: 0.13643068, y: 0.16}
   m_EdgeRadius: 0
 --- !u!212 &1352299179
+=======
+  m_GameObject: {fileID: 957203693}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4646f9e24209b1f47be105a3a6e240af, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.81, y: 1.01}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &957203695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957203693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65428fe0ae6067459f316784970ff42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &957203696
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957203693}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.81, y: 1.01}
+    newSize: {x: 1.81, y: 1.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.81, y: 1.01}
+  m_EdgeRadius: 0
+--- !u!4 &957203697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957203693}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3899999, y: -3.418, z: -1.65657}
+  m_LocalScale: {x: 0.95611, y: 0.95611, z: 0.95611}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1469746679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469746680}
+  - component: {fileID: 1469746681}
+  m_Layer: 0
+  m_Name: WoodenPlank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1469746680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469746679}
+  m_LocalRotation: {x: 0, y: 0, z: 0.16427295, w: 0.98641497}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 126009010}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18.91}
+--- !u!212 &1469746681
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5911,12 +6224,17 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_Size: {x: 0.16, y: 0.16}
+=======
+  m_Size: {x: 3.97, y: 0.67}
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
 --- !u!4 &1352299180
 Transform:
   m_ObjectHideFlags: 0
@@ -6014,6 +6332,9 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1749784862
+=======
+--- !u!1 &1597049539
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6021,17 +6342,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   - component: {fileID: 1749784863}
   - component: {fileID: 1749784864}
   - component: {fileID: 1749784866}
   - component: {fileID: 1749784865}
   m_Layer: 9
   m_Name: CeillingHole (Empty GO)
+=======
+  - component: {fileID: 1597049543}
+  - component: {fileID: 1597049542}
+  - component: {fileID: 1597049541}
+  - component: {fileID: 1597049540}
+  m_Layer: 0
+  m_Name: FixedPipe
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
 --- !u!4 &1749784863
 Transform:
   m_ObjectHideFlags: 0
@@ -6049,11 +6380,15 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1749784864
+=======
+--- !u!114 &1597049540
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_GameObject: {fileID: 1749784862}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -6064,18 +6399,33 @@ MonoBehaviour:
   _plankSpriteRenderer: {fileID: 1895330229}
   _particleSystem: {fileID: 328156310}
 --- !u!61 &1749784865
+=======
+  m_GameObject: {fileID: 1597049539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b3a370730712442887fed9f0e65f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pipeSpriteRenderer: {fileID: 957203694}
+--- !u!61 &1597049541
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_GameObject: {fileID: 1749784862}
+=======
+  m_GameObject: {fileID: 1597049539}
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_Offset: {x: 1.1348945, y: 1.0247927}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -6083,10 +6433,20 @@ BoxCollider2D:
     oldSize: {x: 0, y: 0}
     newSize: {x: 0, y: 0}
     adaptiveTilingThreshold: 0
+=======
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.51, y: 1.41}
+    newSize: {x: 1.51, y: 1.41}
+    adaptiveTilingThreshold: 0.5
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_Size: {x: 1.3387749, y: 0.50877714}
   m_EdgeRadius: 0
 --- !u!61 &1749784866
@@ -6147,12 +6507,21 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 24.04}
 --- !u!212 &1895330229
+=======
+  m_Size: {x: 1.51, y: 1.41}
+  m_EdgeRadius: 0
+--- !u!212 &1597049542
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_GameObject: {fileID: 1895330227}
+=======
+  m_GameObject: {fileID: 1597049539}
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
   m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -6186,17 +6555,26 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_Sprite: {fileID: 21300000, guid: 78767d6b6eb2f974e9fd37a255cb3377, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: a1a49d21580f05e4e86d668fdaa828e7, type: 3}
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_Size: {x: 3.71, y: 1.13}
+=======
+  m_Size: {x: 1.51, y: 1.41}
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
 --- !u!1 &1917222612
 GameObject:
   m_ObjectHideFlags: 0
@@ -6241,11 +6619,15 @@ BoxCollider2D:
   m_Size: {x: 0.14729813, y: 0.2400203}
   m_EdgeRadius: 0
 --- !u!4 &1917222614
+=======
+--- !u!4 &1597049543
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_GameObject: {fileID: 1917222612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 9.26, y: -1.633635, z: 14.446054}
@@ -6255,6 +6637,17 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1920409714
+=======
+  m_GameObject: {fileID: 1597049539}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.5160003, y: 0.566, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1998735457
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6333,6 +6726,7 @@ Transform:
   m_LocalPosition: {x: -1.9411746, y: -1.7442005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_Father: {fileID: 376051611}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6516,29 +6910,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseGrabAnimOnInteract: 1
 --- !u!61 &2128164522
+=======
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1998735460
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_GameObject: {fileID: 2128164518}
+=======
+  m_GameObject: {fileID: 1998735457}
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_Offset: {x: 0, y: 0.3186152}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.71, y: 1.13}
     newSize: {x: 3.71, y: 1.13}
+=======
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.97, y: 0.67}
+    newSize: {x: 3.97, y: 0.67}
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_Size: {x: 3.65, y: 1.7372303}
   m_EdgeRadius: 0
 --- !u!1 &2147150218
@@ -6561,10 +6975,17 @@ GameObject:
   m_IsActive: 1
 --- !u!81 &2147150219
 AudioListener:
+=======
+  m_Size: {x: 3.97, y: 0.67}
+  m_EdgeRadius: 0
+--- !u!114 &1998735461
+MonoBehaviour:
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
   m_GameObject: {fileID: 2147150218}
   m_Enabled: 1
 --- !u!20 &2147150220
@@ -6627,10 +7048,79 @@ Transform:
 --- !u!1001 &6929481857526638594
 PrefabInstance:
   m_ObjectHideFlags: 0
+=======
+  m_GameObject: {fileID: 1998735457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce50e8f3bf73e27429f69245f4e889d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &2898816114222745777
+PrefabInstance:
+  m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2898816114382335040, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_Name
+      value: Save Handler
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898816114382335043, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5976841
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898816114382335043, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.50926423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898816114382335043, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.473648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898816114382335043, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898816114382335043, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898816114382335043, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898816114382335043, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898816114382335043, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898816114382335043, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898816114382335043, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898816114382335043, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 75aaa6fbf4b337c4882044d62ee51cc3, type: 3}
+--- !u!1001 &5052068167849692893
+PrefabInstance:
+  m_ObjectHideFlags: 0
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+<<<<<<< HEAD:Reach/Assets/Scenes/Island 1/Room01.unity
     - target: {fileID: 6929481858191439092, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_Name
       value: Player (Shadow)
@@ -6681,3 +7171,243 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 851284c57957c5041943a682efe54c2b, type: 3}
+=======
+    - target: {fileID: 5052068167018879479, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068167018879479, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068167018879479, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068167018879479, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068167018879479, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068167018879479, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068167321258569, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068167321258569, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068167321258569, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068167321258569, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068167321258569, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068167321258569, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168293384606, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168293384606, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168293384606, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168293384606, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168293384606, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168293384606, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727030, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168547727031, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 5052068168547727034, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_Name
+      value: Inventory[canvas]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168593622698, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168593622698, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168593622698, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168593622698, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168593622698, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168593622698, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168597463498, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168597463498, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168597463498, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168597463498, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168597463498, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168597463498, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168690243115, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168690243115, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168690243115, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168690243115, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168690243115, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052068168690243115, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: baca1d8a24ed00b42a03092442969603, type: 3}
+>>>>>>> master:Reach/Assets/Scenes/SampleScene.unity

@@ -1,11 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door : Interactable
 {
     private LevelLoader _levelLoader;
+
+    [Header("Load Next Level")]
     public string LevelName;
+
+    [Header("Unlock Door")]
+    public bool IsDoorLocked;
+    public string KeyGameobject;
+    public string KeyProperty;
+
+    [Header("Play Cutscene")]
+    public bool PlayCutscene;
 
     private void Awake()
     {
@@ -14,12 +23,28 @@ public class Door : Interactable
 
     public override bool Interact(Item item)
     {
-        if (item == null && !string.IsNullOrEmpty(LevelName))
+        bool succesfullInteraction = false;
+
+        if (IsDoorLocked)
         {
-            _levelLoader.LoadNextLevel(LevelName);
-            return true;
+            if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, KeyGameobject, KeyProperty, out bool isUnlocked))
+            {
+                if (LevelName != string.Empty)
+                {
+                    _levelLoader.LoadNextLevel(LevelName, PlayCutscene);
+                    succesfullInteraction = true;
+                }
+            }
+        }
+        else
+        {
+            if (LevelName != string.Empty)
+            {
+                _levelLoader.LoadNextLevel(LevelName, PlayCutscene);
+                succesfullInteraction = true;
+            }
         }
 
-        return false;
+        return succesfullInteraction;
     }
 }
