@@ -4,10 +4,7 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    private void Awake()
-    {
-        this.gameObject.layer = LayerMask.GetMask("Interactable");
-    }
+    public bool UseGrabAnimOnInteract;
 
     /// <summary>
     /// Interact with the Interactable
@@ -21,7 +18,7 @@ public abstract class Interactable : MonoBehaviour
         Interactable foundInteractable = null;
 
         Vector2 mousePosAsworldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D rayHitInfo = Physics2D.Raycast(mousePosAsworldPoint, Vector2.zero);
+        RaycastHit2D rayHitInfo = Physics2D.Raycast(mousePosAsworldPoint, Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Interactable"));
 
         if (rayHitInfo)
         {

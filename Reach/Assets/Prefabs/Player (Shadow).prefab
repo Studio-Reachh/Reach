@@ -9822,10 +9822,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3, y: 8.5}
+  m_Size: {x: 3.75, y: 9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6929481858191439093
@@ -9859,9 +9859,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f00b94501d59347918d54e20872195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  leftFoot: {fileID: 709601454}
-  rightFoot: {fileID: 1286063973}
+  speed: 1.5
+  _targetPosition: {x: 0, y: 0, z: 0}
+  leftFootParticleSystem: {fileID: 709601454}
+  rightFootParticleSystem: {fileID: 1286063973}
+  FacingDirection: 0
 --- !u!61 &6929481858191439096
 BoxCollider2D:
   m_ObjectHideFlags: 0

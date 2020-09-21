@@ -5,18 +5,18 @@ using UnityEngine;
 public class ParticleCollision : MonoBehaviour
 {
     public ParticleSystem particleSystem;
-    public List<ParticleCollisionEvent> collisionEvents = new List<ParticleCollisionEvent>();
+    private List<ParticleCollisionEvent> collisionEvents = new List<ParticleCollisionEvent>();
 
-    public Sprite Sprite;
+    public GameObject GameObjectToSpawn;
 
     private void OnParticleCollision(GameObject other)
     {
-        int numCollisionEvents = particleSystem.GetCollisionEvents(this.gameObject, collisionEvents);
+        int numCollisionEvents = particleSystem.GetCollisionEvents(other, collisionEvents);
         for (int i = 0; i < numCollisionEvents; i++)
         {
             Vector3 pos = collisionEvents[i].intersection;
-
-            Destroy(gameObject, 2);
+            GameObject spawnedGO = Instantiate(GameObjectToSpawn, pos, Quaternion.identity);
+            Destroy(spawnedGO, 2);
         }
     }
 }

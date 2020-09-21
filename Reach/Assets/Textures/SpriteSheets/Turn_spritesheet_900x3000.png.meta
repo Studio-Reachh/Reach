@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 005a40bea0251e84b8188f136040877b
+guid: a938a6882ca3d1646918088d3c7c0371
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7714584521113822097
-    second: WalkSheet(300x850)_0
+      213: 9072340615493009452
+    second: Turn_spritesheet_900x3000_0
   - first:
-      213: 4423025397701209841
-    second: WalkSheet(300x850)_1
+      213: -2173901936394620578
+    second: Turn_spritesheet_900x3000_1
   - first:
-      213: -8261205735152724123
-    second: WalkSheet(300x850)_2
+      213: 5824779736450518300
+    second: Turn_spritesheet_900x3000_2
   - first:
-      213: 783751902182894099
-    second: WalkSheet(300x850)_3
+      213: 7552546799580871780
+    second: Turn_spritesheet_900x3000_3
   - first:
-      213: 3279161649978866505
-    second: WalkSheet(300x850)_4
+      213: -3821094040603327982
+    second: Turn_spritesheet_900x3000_4
   - first:
-      213: 4329524206669521687
-    second: WalkSheet(300x850)_5
+      213: -4393658993759226943
+    second: Turn_spritesheet_900x3000_5
   - first:
-      213: 1325739754692884613
-    second: WalkSheet(300x850)_6
+      213: 6143520414416042387
+    second: Turn_spritesheet_900x3000_6
   - first:
-      213: -1633397739045890764
-    second: WalkSheet(300x850)_7
+      213: -4287597199412131118
+    second: Turn_spritesheet_900x3000_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -90,7 +90,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,7 +102,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +114,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WalkSheet(300x850)_0
+      name: Turn_spritesheet_900x3000_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 300
-        height: 850
+        width: 375
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19367b29fb5bf0b60800000000000000
-      internalID: 7714584521113822097
+      spriteID: c204fc3f8bd67ed70800000000000000
+      internalID: 9072340615493009452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkSheet(300x850)_1
+      name: Turn_spritesheet_900x3000_1
       rect:
         serializedVersion: 2
-        x: 300
+        x: 375
         y: 0
-        width: 300
-        height: 850
+        width: 375
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fee28e3a2eb16d30800000000000000
-      internalID: 4423025397701209841
+      spriteID: e513aa8e4bfb4d1e0800000000000000
+      internalID: -2173901936394620578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkSheet(300x850)_2
+      name: Turn_spritesheet_900x3000_2
       rect:
         serializedVersion: 2
-        x: 600
+        x: 750
         y: 0
-        width: 300
-        height: 850
+        width: 375
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5675dc3572d4a5d80800000000000000
-      internalID: -8261205735152724123
+      spriteID: c1dc60e2f46c5d050800000000000000
+      internalID: 5824779736450518300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkSheet(300x850)_3
+      name: Turn_spritesheet_900x3000_3
       rect:
         serializedVersion: 2
-        x: 900
+        x: 1125
         y: 0
-        width: 300
-        height: 850
+        width: 375
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,41 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31ae5a9d33270ea00800000000000000
-      internalID: 783751902182894099
+      spriteID: 46cf7829c4900d860800000000000000
+      internalID: 7552546799580871780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkSheet(300x850)_4
-      rect:
-        serializedVersion: 2
-        x: 1200
-        y: 0
-        width: 300
-        height: 850
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94bf21c952ce18d20800000000000000
-      internalID: 3279161649978866505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WalkSheet(300x850)_5
+      name: Turn_spritesheet_900x3000_4
       rect:
         serializedVersion: 2
         x: 1500
         y: 0
-        width: 300
-        height: 850
+        width: 375
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 713edf0c35f851c30800000000000000
-      internalID: 4329524206669521687
+      spriteID: 2120a70173fb8fac0800000000000000
+      internalID: -3821094040603327982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkSheet(300x850)_6
+      name: Turn_spritesheet_900x3000_5
       rect:
         serializedVersion: 2
-        x: 1800
+        x: 1875
         y: 0
-        width: 300
-        height: 850
+        width: 375
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58835176849f56210800000000000000
-      internalID: 1325739754692884613
+      spriteID: 1c3f7cc7c669603c0800000000000000
+      internalID: -4393658993759226943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkSheet(300x850)_7
+      name: Turn_spritesheet_900x3000_6
       rect:
         serializedVersion: 2
-        x: 2100
+        x: 2250
         y: 0
-        width: 300
-        height: 850
+        width: 375
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,8 +265,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4355e3319610559e0800000000000000
-      internalID: -1633397739045890764
+      spriteID: 399f0a3644b224550800000000000000
+      internalID: 6143520414416042387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Turn_spritesheet_900x3000_7
+      rect:
+        serializedVersion: 2
+        x: 2625
+        y: 0
+        width: 375
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da841550156f74c0800000000000000
+      internalID: -4287597199412131118
       vertices: []
       indices: 
       edges: []
@@ -295,7 +295,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e7b9ddaf52d8b7f499e8c423843b458a
+    spriteID: 6dc50f27da9123b4cb29fa45bd7f017d
     internalID: 0
     vertices: []
     indices: 

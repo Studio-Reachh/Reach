@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum FacingDirection
+{
+    Left,
+    Right
+}
+
 public class PlayerMovement : MonoBehaviour
 {
     public float speed;
 
-    private Vector3 _targetPosition;
+    public Vector3 _targetPosition;
 
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollider2D;
     private Animator _animator;
 
-    public ParticleSystem leftFoot, rightFoot;
+    public ParticleSystem leftFootParticleSystem, rightFootParticleSystem;
+    public FacingDirection FacingDirection;
 
     private void Awake()
     {
@@ -27,7 +34,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        _spriteRenderer.flipX = FacingDirection == FacingDirection.Left ? true : false;
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
         {
             Interactable interactableToMoveTowards = Interactable.GetInteractableAtMousePosition();
             if (interactableToMoveTowards)
@@ -35,8 +44,18 @@ public class PlayerMovement : MonoBehaviour
                 Collider2D collider = interactableToMoveTowards.GetComponent<Collider2D>();
                 if (collider)
                 {
-                    //TODO: Weet nog niet zeker of dit is wat ik wil, kijk of er een andere manier is
-                    _targetPosition = new Vector2(collider.ClosestPoint(transform.position).x, _targetPosition.y);
+                    if (transform.position.x <= collider.bounds.min.x)
+                    {
+                        _targetPosition = collider.bounds.min;
+                    }
+                    else if (transform.position.x >= collider.bounds.max.x)
+                    {
+                        _targetPosition = collider.bounds.max;
+                    }
+                    else
+                    {
+                        _targetPosition = transform.position;
+                    }
                 }
                 else
                 {
@@ -51,34 +70,45 @@ public class PlayerMovement : MonoBehaviour
                 _interactableToMoveTowards = null;
             }
 
+            Vector2 rayDirection = Vector2.zero;
             if (_targetPosition.x < transform.position.x)
             {
-                _spriteRenderer.flipX = true;
+                if (FacingDirection == FacingDirection.Right)
+                {
+                    _animator.SetBool("IsTurning", true);
+                    _animator.SetBool("IsWalking", false);
+                }
+
+                rayDirection = Vector2.left;
             }
-            else
+            else if (_targetPosition.x > transform.position.x)
             {
-                _spriteRenderer.flipX = false;
+                if (FacingDirection == FacingDirection.Left)
+                {
+                    _animator.SetBool("IsTurning", true);
+                    _animator.SetBool("IsWalking", false);
+                }
+
+                rayDirection = Vector2.right;
             }
 
-            Vector2 rayDirection = _spriteRenderer.flipX == true ? Vector2.left : Vector2.right;
             RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, Mathf.Abs(_targetPosition.x - transform.position.x), LayerMask.GetMask("Obstacle"));
             if (hit)
             {
-                if (_spriteRenderer.flipX)
+                if (rayDirection == Vector2.left)
                 {
                     _targetPosition = new Vector2(hit.point.x + _boxCollider2D.bounds.size.x / 2, _targetPosition.y);
                 }
-                else
+                else if (rayDirection == Vector2.right)
                 {
                     _targetPosition = new Vector2(hit.point.x - _boxCollider2D.bounds.size.x / 2, _targetPosition.y);
                 }
 
                 _interactableToMoveTowards = null;
-                return;
             }
         }
 
-        if (transform.position.x != _targetPosition.x)
+        if (transform.position.x != _targetPosition.x && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
         {
             _animator.SetBool("IsWalking", true);
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(_targetPosition.x, transform.position.y, transform.position.z), Time.deltaTime * speed);
@@ -87,37 +117,74 @@ public class PlayerMovement : MonoBehaviour
         {
             if (_interactableToMoveTowards)
             {
-                _interactableToMoveTowards.Interact(null);
-                _interactableToMoveTowards = null;
+                if (_interactableToMoveTowards.UseGrabAnimOnInteract)
+                {
+                    _animator.SetBool("IsGrabbingUp", true);
+                }
+                else
+                {
+                    InteractWithInteractable();
+                }
             }
 
             _animator.SetBool("IsWalking", false);
         }
     }
 
-    public void WalkStepParticles(string foot)
+    public void EndOfTurningAnim()
     {
-        if (_spriteRenderer.flipX)
+        if (FacingDirection == FacingDirection.Right)
         {
-            if (foot.ToLower() == "left")
-            {
-                rightFoot.Play();
-            }
-            else if (foot.ToLower() == "right")
-            {
-                leftFoot.Play();
-            }
+            FacingDirection = FacingDirection.Left;
         }
         else
         {
-            if (foot.ToLower() == "left")
-            {
-                leftFoot.Play();
-            }
-            else if (foot.ToLower() == "right")
-            {
-                rightFoot.Play();
-            }
+            FacingDirection = FacingDirection.Right;
         }
+
+        _animator.SetBool("IsTurning", false);
+        _animator.SetBool("IsWalking", false);
+    }
+
+    public void EndGrabAnim()
+    {
+        _animator.SetBool("IsGrabbingUp", false);
+
+        if (_interactableToMoveTowards)
+        {
+            InteractWithInteractable();
+        }
+    }
+
+    private void InteractWithInteractable()
+    {
+        _interactableToMoveTowards.Interact(null);
+        _interactableToMoveTowards = null;
+    }
+
+    public void WalkStepParticles(string foot)
+    {
+        //if (_spriteRenderer.flipX)
+        //{
+        //    if (foot.ToLower() == "left")
+        //    {
+        //        rightFootParticleSystem.Play();
+        //    }
+        //    else if (foot.ToLower() == "right")
+        //    {
+        //        leftFootParticleSystem.Play();
+        //    }
+        //}
+        //else
+        //{
+        //    if (foot.ToLower() == "left")
+        //    {
+        //        leftFootParticleSystem.Play();
+        //    }
+        //    else if (foot.ToLower() == "right")
+        //    {
+        //        rightFootParticleSystem.Play();
+        //    }
+        //}
     }
 }

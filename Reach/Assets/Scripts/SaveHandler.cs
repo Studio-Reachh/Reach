@@ -9,13 +9,34 @@ using UnityEngine.SceneManagement;
 
 public class SaveHandler : MonoBehaviour
 {
+    private void Awake()
+    {
+        SaveCurrentSceneName();
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.touchCount > 2 || Input.GetKeyDown(KeyCode.Q))
         {
             PlayerPrefs.DeleteAll();
             print("Deleted playerprefs");
         }
+    }
+
+    private void SaveCurrentSceneName()
+    {
+        PlayerPrefs.SetString("LastActiveSceneName", SceneManager.GetActiveScene().name);
+    }
+
+    public static string GetLastActiveSceneName()
+    {
+        string lastActiveSceneName = PlayerPrefs.GetString("LastActiveSceneName");
+        if (string.IsNullOrEmpty(lastActiveSceneName))
+        {
+            lastActiveSceneName = SceneManager.GetActiveScene().name;
+        }
+
+        return lastActiveSceneName;
     }
 
     public static void SaveInventory()
