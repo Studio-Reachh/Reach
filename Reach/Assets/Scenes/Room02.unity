@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 387051213}
   - component: {fileID: 387051212}
   - component: {fileID: 387051211}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LetterPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 399856443}
   - component: {fileID: 399856442}
   - component: {fileID: 399856441}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: WallPopupInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1744,7 +1744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1183610336}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Popups
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1873,7 +1873,7 @@ GameObject:
   - component: {fileID: 1290157222}
   - component: {fileID: 1290157221}
   - component: {fileID: 1290157220}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MorsecodeMachine
   m_TagString: MorsecodeMachine
   m_Icon: {fileID: 0}
@@ -2891,11 +2891,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 253
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -133
+      value: -119
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -691.5075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -388.9252
       objectReference: {fileID: 0}
     - target: {fileID: 1970519225945560833, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
       propertyPath: m_Name
@@ -2987,6 +3011,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1970519225945560845, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970519225945560846, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1970519226955533359, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
@@ -3205,6 +3233,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1183610336}
     m_Modifications:
+    - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 174
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -695.4635
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970519225857700214, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -391.15018
+      objectReference: {fileID: 0}
     - target: {fileID: 1970519225945560833, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
       propertyPath: m_Name
       value: Wallpopup[Canvas]
@@ -3295,6 +3339,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1970519225945560845, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970519225945560846, guid: 76dc2cdeae033a4458da73ece163ead8, type: 3}
+      propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

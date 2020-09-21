@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class DroppedItem : Interactable
@@ -38,9 +39,12 @@ public class DroppedItem : Interactable
     }
     private void OnMouseDown()
     {
-        if (Interact(null))
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            Destroy(this.gameObject);
+            if (Interact(null))
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

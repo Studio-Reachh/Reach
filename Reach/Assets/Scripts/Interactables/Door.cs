@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class Door : Interactable
@@ -28,22 +29,26 @@ public class Door : Interactable
 
     private void OnMouseDown()
     {
-        if (IsDoorLocked)
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, KeyGameobject, KeyProperty, out bool isUnlocked ))
+            if (IsDoorLocked)
+            {
+                if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, KeyGameobject, KeyProperty, out bool isUnlocked))
+                {
+                    if (LevelName != string.Empty)
+                    {
+                        _levelLoader.LoadNextLevel(LevelName, PlayCutscene);
+                        Interact(null);
+                    }
+                }
+            }
+            else
             {
                 if (LevelName != string.Empty)
                 {
                     _levelLoader.LoadNextLevel(LevelName, PlayCutscene);
                     Interact(null);
                 }
-            }
-        } else
-        {
-            if (LevelName != string.Empty)
-            {
-                _levelLoader.LoadNextLevel(LevelName, PlayCutscene);
-                Interact(null);
             }
         }
     }
