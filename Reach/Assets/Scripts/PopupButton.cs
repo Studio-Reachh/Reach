@@ -2,12 +2,16 @@
 using UnityEditor;
 using UnityEngine;
 
-public class PopupButton : MonoBehaviour
+public class PopupButton : Interactable
 {
     public PopupMenu PopupMenu;
 
-    private void OnMouseDown()
+    public override bool Interact(Item item)
     {
+        bool successfulInteraction = true;
+
         PopupMenu.OpenPopupMenu();
+
+        return successfulInteraction;
     }
 }

@@ -34,6 +34,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (PopupMenu.isPopupOpen)
+        {
+            speed = 0;
+            return;
+        } else
+        {
+            speed = 1.5f;
+        }
         _spriteRenderer.flipX = FacingDirection == FacingDirection.Left ? true : false;
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))

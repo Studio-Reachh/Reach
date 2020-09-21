@@ -4,7 +4,7 @@ using System.Collections;
 public abstract class PopupMenu : MonoBehaviour
 {
     public GameObject popupMenuUI;
-    protected bool isPopupOpen;
+    public static bool isPopupOpen;
     private GameObject _inventory;
     public virtual void Awake()
     {
