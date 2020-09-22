@@ -18,6 +18,6 @@ public class StartMenu : MonoBehaviour
 
     public void ContinueGame()
     {
-        _levelLoader.LoadNextLevel("Room01", true);
+        _levelLoader.LoadNextLevel("Room01", false);
     }
 }
