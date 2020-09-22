@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b6ea22f9b791d4da3a1c53e2fa16bc, type: 3}
   m_Name: WoodenPlank
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: 78767d6b6eb2f974e9fd37a255cb3377, type: 3}
+  Image: {fileID: 21300000, guid: a6fa5ceb05101fe43824d815bb33dd4d, type: 3}
   DestroyOnSuccessfulUse: 1

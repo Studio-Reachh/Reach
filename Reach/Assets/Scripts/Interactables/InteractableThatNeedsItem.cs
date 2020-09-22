@@ -5,12 +5,11 @@ public class InteractableThatNeedsItem : Interactable
 {
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
+    private bool _hasItem = false;
 
     [Header("Item")]
     public string ItemSaveProperty;
     public Item ItemNeeded;
-
-    private bool _hasItem = false;
 
     [Header("Change Sprite")]
     public bool changeSprite;
@@ -32,6 +31,7 @@ public class InteractableThatNeedsItem : Interactable
         if (changeSprite)
         {
             _spriteRenderer.sprite = sprite;
+
         } else
         {
             _spriteRenderer.enabled = true;
