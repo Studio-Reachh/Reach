@@ -9,12 +9,20 @@ public class ParticleCollision : MonoBehaviour
 
     public GameObject GameObjectToSpawn;
 
+    private void Awake()
+    {
+
+    }
+
     private void OnParticleCollision(GameObject other)
     {
         int numCollisionEvents = particleSystem.GetCollisionEvents(other, collisionEvents);
         for (int i = 0; i < numCollisionEvents; i++)
         {
-            Vector3 pos = collisionEvents[i].intersection;
+            ParticleCollisionEvent collisionEvent = collisionEvents[i];
+            Vector3 pos = collisionEvent.intersection;
+            Vector3 normal = collisionEvent.normal;
+
             GameObject spawnedGO = Instantiate(GameObjectToSpawn, pos, Quaternion.identity);
             Destroy(spawnedGO, 2);
         }
