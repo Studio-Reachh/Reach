@@ -16,11 +16,34 @@ public class SaveHandler : MonoBehaviour
 
     private void Update()
     {
-        if (Input.touchCount > 2 || Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             PlayerPrefs.DeleteAll();
             print("Deleted playerprefs");
         }
+    }
+
+    public static void SavePlayerData(PlayerData playerData)
+    {
+        if (playerData == null)
+        {
+            return;
+        }
+
+        string playerDataJson = JsonConvert.SerializeObject(playerData);
+        PlayerPrefs.SetString("PlayerData", playerDataJson);
+    }
+
+    public static PlayerData GetPlayerData()
+    {
+        string playerDataJson = PlayerPrefs.GetString("PlayerData");
+        if (string.IsNullOrEmpty(playerDataJson))
+        {
+            return null;
+        }
+
+        PlayerData playerData = JsonConvert.DeserializeObject<PlayerData>(playerDataJson);
+        return playerData;
     }
 
     private void SaveCurrentSceneName()

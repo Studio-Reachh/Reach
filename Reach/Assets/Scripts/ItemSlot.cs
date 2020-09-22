@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
+    [SerializeField]
     private Image _imageElementForItem;
 
     private Item _item;
@@ -27,10 +28,12 @@ public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             if (_item)
             {
                 _imageElementForItem.sprite = Item.Image;
+                _imageElementForItem.enabled = true;
             }
             else
             {
                 _imageElementForItem.sprite = null;
+                _imageElementForItem.enabled = false;
             }
         }
     }
@@ -41,7 +44,7 @@ public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     private void Awake()
     {
-        _imageElementForItem = gameObject.transform.Find("ItemSlot (Image)").GetComponent<Image>();
+        //_imageElementForItem = gameObject.transform.Find("ItemSlot (Image)").GetComponent<Image>();
 
         if (!DraggingUIItemGO)
         {
@@ -86,12 +89,15 @@ public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         DraggingUIItemGO.SetActive(false);
         DragGOImage.sprite = null;
-
-        _imageElementForItem.enabled = true;
     }
 
     void Update()
     {
+        if (!Item)
+        {
+            _imageElementForItem.enabled = false;
+        }
+
         if (IsDragging)
         {
             DraggingUIItemGO.transform.position = Input.mousePosition;
@@ -123,5 +129,9 @@ public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
 
         StopDragItem();
+        if (Item)
+        {
+            _imageElementForItem.enabled = true;
+        }
     }
 }

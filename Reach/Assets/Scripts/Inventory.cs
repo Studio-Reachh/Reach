@@ -11,10 +11,7 @@ public class Inventory : MonoBehaviour
     private void Awake()
     {
         ItemSlots = GetComponentsInChildren<ItemSlot>().ToList();
-    }
 
-    private void Start()
-    {
         List<Item> listItemsFromSaveFile = SaveHandler.GetSavedItemsForInventory();
         foreach (Item item in listItemsFromSaveFile)
         {

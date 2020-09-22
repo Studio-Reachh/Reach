@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
 
-    public Vector3 _targetPosition;
+    private Vector3 _targetPosition;
 
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollider2D;
@@ -21,8 +21,28 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem leftFootParticleSystem, rightFootParticleSystem;
     public FacingDirection FacingDirection;
 
+    private void OnApplicationQuit()
+    {
+        PlayerData playerData = new PlayerData()
+        {
+            FacingDirection = this.FacingDirection,
+            X_Pos = transform.position.x,
+            Y_Pos = transform.position.y,
+            Z_Pos = transform.position.z
+        };
+
+        //SaveHandler.SavePlayerData(playerData);
+    }
+
     private void Awake()
     {
+        //PlayerData playerData = SaveHandler.GetPlayerData();
+        //if (playerData != null)
+        //{
+        //    transform.position = new Vector3(playerData.X_Pos, playerData.Y_Pos, playerData.Z_Pos);
+        //    this.FacingDirection = playerData.FacingDirection;
+        //}
+
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _boxCollider2D = GetComponent<BoxCollider2D>();
         _animator = GetComponent<Animator>();
@@ -44,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         }
         _spriteRenderer.flipX = FacingDirection == FacingDirection.Left ? true : false;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
+        if (!ItemSlot.IsDragging && Input.GetKeyDown(KeyCode.Mouse0) && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
         {
             Interactable interactableToMoveTowards = Interactable.GetInteractableAtMousePosition();
             if (interactableToMoveTowards)
