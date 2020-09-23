@@ -15,6 +15,8 @@ public class Keyer : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         _morsecodeMachinePopup.KeyerInput();
         holdDownStartTime = Time.time;
+
+        FindObjectOfType<AudioManager>().PlaySound("Morsecode sound");
     }
 
     public void OnPointerUp(PointerEventData eventData)

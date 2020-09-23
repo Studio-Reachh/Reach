@@ -1,10 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class StartMenu : MonoBehaviour
 {
     private LevelLoader _levelLoader;
+
+    [Header("Audio")]
+    public string Audio;
 
     private void Awake()
     {
@@ -13,11 +14,11 @@ public class StartMenu : MonoBehaviour
     public void StartNewGame()
     {
         PlayerPrefs.DeleteAll();
-        _levelLoader.LoadNextLevel("Room01", true);
+        _levelLoader.LoadNextLevel("Room01", true, Audio);
     }
 
     public void ContinueGame()
     {
-        _levelLoader.LoadNextLevel("Room01", false);
+        _levelLoader.LoadNextLevel("Room01", false, Audio);
     }
 }

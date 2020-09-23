@@ -18,14 +18,19 @@ public class LevelLoader : MonoBehaviour
             VideoplayerCanvas.SetActive(false);
         }
     }
-    public void LoadNextLevel(string sceneName, bool PlayCutscene)
+    public void LoadNextLevel(string sceneName, bool PlayCutscene, string Audio)
     {
-        if(Cutscene && PlayCutscene)
+        if (Cutscene && PlayCutscene)
         {
             StartCoroutine(PlayCutSceneBeforeLoadingLevel(sceneName));
-        } else
+        }
+        else
         {
             StartCoroutine(LoadLevel(sceneName));
+            if (Audio != string.Empty)
+            {
+                FindObjectOfType<AudioManager>().PlaySound(Audio);
+            }
         }
     }
 

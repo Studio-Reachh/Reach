@@ -27,6 +27,8 @@ public class DroppedItem : Interactable
             Inventory.AddItem(Item);
             successfulInteraction = true;
 
+            FindObjectOfType<AudioManager>().PlaySound("Item pickup");
+
             SaveHandler.SaveLevel(name, ItemProperty, true);
             Destroy(this.gameObject);
         }

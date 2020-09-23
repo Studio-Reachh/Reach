@@ -27,6 +27,8 @@ public class MorsecodeMachine : MonoBehaviour
     {
         isMachineActive = true;
 
+        FindObjectOfType<AudioManager>().PlaySound("Morsecodemachine activates");
+
         if(morsecodeMachineActive)
         {
             morsecodeMachineDeactive.sprite = morsecodeMachineActive;

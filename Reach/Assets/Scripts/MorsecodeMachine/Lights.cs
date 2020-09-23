@@ -21,6 +21,8 @@ public class Lights : MonoBehaviour
         {
             if (greenLight)
             {
+                FindObjectOfType<AudioManager>().PlaySound("Light change");
+
                 if (_spriteRenderer)
                 {
                     _spriteRenderer.sprite = greenLight;
