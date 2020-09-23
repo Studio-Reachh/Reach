@@ -1,0 +1,1216 @@
+fileFormatVersion: 2
+guid: a809bbb1cfe2e854a9e0b266134aa5dc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7766178719075297597
+    second: WindChime_spritesheet_9500x500_0
+  - first:
+      213: -4708442243672718382
+    second: WindChime_spritesheet_9500x500_1
+  - first:
+      213: 4676991819311914053
+    second: WindChime_spritesheet_9500x500_2
+  - first:
+      213: 1298744035216644985
+    second: WindChime_spritesheet_9500x500_3
+  - first:
+      213: 1123091102045774269
+    second: WindChime_spritesheet_9500x500_4
+  - first:
+      213: -4422563890820325029
+    second: WindChime_spritesheet_9500x500_5
+  - first:
+      213: 3727244527305677770
+    second: WindChime_spritesheet_9500x500_6
+  - first:
+      213: -4016034644656517152
+    second: WindChime_spritesheet_9500x500_7
+  - first:
+      213: 1801246160136238569
+    second: WindChime_spritesheet_9500x500_8
+  - first:
+      213: -7784239234483641176
+    second: WindChime_spritesheet_9500x500_9
+  - first:
+      213: -7351357555846175945
+    second: WindChime_spritesheet_9500x500_10
+  - first:
+      213: 4167806380585025379
+    second: WindChime_spritesheet_9500x500_11
+  - first:
+      213: 1021112781027879716
+    second: WindChime_spritesheet_9500x500_12
+  - first:
+      213: 8558793284572848775
+    second: WindChime_spritesheet_9500x500_13
+  - first:
+      213: -134430867897558986
+    second: WindChime_spritesheet_9500x500_14
+  - first:
+      213: -6895642909882971759
+    second: WindChime_spritesheet_9500x500_15
+  - first:
+      213: 7042888754701375201
+    second: WindChime_spritesheet_9500x500_16
+  - first:
+      213: -2582026615273859912
+    second: WindChime_spritesheet_9500x500_17
+  - first:
+      213: 972747983752148942
+    second: WindChime_spritesheet_9500x500_18
+  - first:
+      213: 5463483766869956307
+    second: WindChime_spritesheet_9500x500_19
+  - first:
+      213: -4782310302057577921
+    second: WindChime_spritesheet_9500x500_20
+  - first:
+      213: 1708947793276650875
+    second: WindChime_spritesheet_9500x500_21
+  - first:
+      213: 7625125190725075745
+    second: WindChime_spritesheet_9500x500_22
+  - first:
+      213: -3000410283260951111
+    second: WindChime_spritesheet_9500x500_23
+  - first:
+      213: -4469894664639636766
+    second: WindChime_spritesheet_9500x500_24
+  - first:
+      213: -314207540775685593
+    second: WindChime_spritesheet_9500x500_25
+  - first:
+      213: -8169710102046297480
+    second: WindChime_spritesheet_9500x500_26
+  - first:
+      213: 7477765252014542504
+    second: WindChime_spritesheet_9500x500_27
+  - first:
+      213: -3708548630101897927
+    second: WindChime_spritesheet_9500x500_28
+  - first:
+      213: 5802027720398536
+    second: WindChime_spritesheet_9500x500_29
+  - first:
+      213: 6718181770147075546
+    second: WindChime_spritesheet_9500x500_30
+  - first:
+      213: -8988610874157268187
+    second: WindChime_spritesheet_9500x500_31
+  - first:
+      213: 5019810179305511239
+    second: WindChime_spritesheet_9500x500_32
+  - first:
+      213: -5808334442575311529
+    second: WindChime_spritesheet_9500x500_33
+  - first:
+      213: -957372593812908617
+    second: WindChime_spritesheet_9500x500_34
+  - first:
+      213: 5898249781511021343
+    second: WindChime_spritesheet_9500x500_35
+  - first:
+      213: -1645069911492364909
+    second: WindChime_spritesheet_9500x500_36
+  - first:
+      213: -8800252272837774251
+    second: WindChime_spritesheet_9500x500_37
+  - first:
+      213: 7438981498334212922
+    second: WindChime_spritesheet_9500x500_38
+  - first:
+      213: -2965139654231190394
+    second: WindChime_spritesheet_9500x500_39
+  - first:
+      213: -3531580004082804819
+    second: WindChime_spritesheet_9500x500_40
+  - first:
+      213: -9187361182017014518
+    second: WindChime_spritesheet_9500x500_41
+  - first:
+      213: -2770516906105098970
+    second: WindChime_spritesheet_9500x500_42
+  - first:
+      213: 8677185359120314557
+    second: WindChime_spritesheet_9500x500_43
+  - first:
+      213: -4578291158531747692
+    second: WindChime_spritesheet_9500x500_44
+  - first:
+      213: 1813542948070280271
+    second: WindChime_spritesheet_9500x500_45
+  - first:
+      213: 1473489885003193272
+    second: WindChime_spritesheet_9500x500_46
+  - first:
+      213: -1186683645401583845
+    second: WindChime_spritesheet_9500x500_47
+  - first:
+      213: 6959831435188605663
+    second: WindChime_spritesheet_9500x500_48
+  - first:
+      213: -5308853526362129199
+    second: WindChime_spritesheet_9500x500_49
+  - first:
+      213: 8480348783256728574
+    second: WindChime_spritesheet_9500x500_50
+  - first:
+      213: -3711981810186065176
+    second: WindChime_spritesheet_9500x500_51
+  - first:
+      213: 5215290827905697506
+    second: WindChime_spritesheet_9500x500_52
+  - first:
+      213: 4113971112107648922
+    second: WindChime_spritesheet_9500x500_53
+  - first:
+      213: 4866313534081675114
+    second: WindChime_spritesheet_9500x500_54
+  - first:
+      213: 3234062118841233545
+    second: WindChime_spritesheet_9500x500_55
+  - first:
+      213: 5414308535790530716
+    second: WindChime_spritesheet_9500x500_56
+  - first:
+      213: -4248359203841580029
+    second: WindChime_spritesheet_9500x500_57
+  - first:
+      213: 7886124594776590381
+    second: WindChime_spritesheet_9500x500_58
+  - first:
+      213: 7754315296159310850
+    second: WindChime_spritesheet_9500x500_59
+  - first:
+      213: 9094045820830407602
+    second: WindChime_spritesheet_9500x500_60
+  - first:
+      213: -4227596966073581255
+    second: WindChime_spritesheet_9500x500_61
+  - first:
+      213: -5841290734209050742
+    second: WindChime_spritesheet_9500x500_62
+  - first:
+      213: 8224907674292099672
+    second: WindChime_spritesheet_9500x500_63
+  - first:
+      213: -8260625293931439894
+    second: WindChime_spritesheet_9500x500_64
+  - first:
+      213: -9208512210336731361
+    second: WindChime_spritesheet_9500x500_65
+  - first:
+      213: -7149220193049258830
+    second: WindChime_spritesheet_9500x500_66
+  - first:
+      213: -8028786678225531337
+    second: WindChime_spritesheet_9500x500_67
+  - first:
+      213: -2780216395791905243
+    second: WindChime_spritesheet_9500x500_68
+  - first:
+      213: 3151622188641702439
+    second: WindChime_spritesheet_9500x500_69
+  - first:
+      213: -1028898428427411187
+    second: WindChime_spritesheet_9500x500_70
+  - first:
+      213: -2682396465706030711
+    second: WindChime_spritesheet_9500x500_71
+  - first:
+      213: -4462736825427613524
+    second: WindChime_spritesheet_9500x500_72
+  - first:
+      213: -8843158673326845343
+    second: WindChime_spritesheet_9500x500_73
+  - first:
+      213: -5475032321891054746
+    second: WindChime_spritesheet_9500x500_74
+  - first:
+      213: -1835281667696056171
+    second: WindChime_spritesheet_9500x500_75
+  - first:
+      213: 8092757073587572559
+    second: WindChime_spritesheet_9500x500_76
+  - first:
+      213: 2995525935867803583
+    second: WindChime_spritesheet_9500x500_77
+  - first:
+      213: 5185825560648329590
+    second: WindChime_spritesheet_9500x500_78
+  - first:
+      213: 9137768619679024392
+    second: WindChime_spritesheet_9500x500_79
+  - first:
+      213: 2065756195556620787
+    second: WindChime_spritesheet_9500x500_80
+  - first:
+      213: -3059444723570433518
+    second: WindChime_spritesheet_9500x500_81
+  - first:
+      213: -7911635661455187705
+    second: WindChime_spritesheet_9500x500_82
+  - first:
+      213: 3357924919699210627
+    second: WindChime_spritesheet_9500x500_83
+  - first:
+      213: 5713085667514981992
+    second: WindChime_spritesheet_9500x500_84
+  - first:
+      213: -6908135165943779436
+    second: WindChime_spritesheet_9500x500_85
+  - first:
+      213: -6579495432967623912
+    second: WindChime_spritesheet_9500x500_86
+  - first:
+      213: -296800990310517191
+    second: WindChime_spritesheet_9500x500_87
+  - first:
+      213: 4142342572514549968
+    second: WindChime_spritesheet_9500x500_88
+  - first:
+      213: 3489296713861915846
+    second: WindChime_spritesheet_9500x500_89
+  - first:
+      213: 889528660122232561
+    second: WindChime_spritesheet_9500x500_90
+  - first:
+      213: -2966479302142169698
+    second: WindChime_spritesheet_9500x500_91
+  - first:
+      213: 3654697115230008449
+    second: WindChime_spritesheet_9500x500_92
+  - first:
+      213: -6623078865183966874
+    second: WindChime_spritesheet_9500x500_93
+  - first:
+      213: 2234079877201344613
+    second: WindChime_spritesheet_9500x500_94
+  - first:
+      213: -987549871664016877
+    second: WindChime_spritesheet_9500x500_95
+  - first:
+      213: -2026775745265769124
+    second: WindChime_spritesheet_9500x500_96
+  - first:
+      213: 1051135930872736645
+    second: WindChime_spritesheet_9500x500_97
+  - first:
+      213: 7035136352393689512
+    second: WindChime_spritesheet_9500x500_98
+  - first:
+      213: -5525223941906287019
+    second: WindChime_spritesheet_9500x500_99
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d396ea4e56207cb60800000000000000
+      internalID: 7766178719075297597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3c17cc9b048aeb0800000000000000
+      internalID: -4708442243672718382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c9e77a74308e040800000000000000
+      internalID: 4676991819311914053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bde39a1d0160210800000000000000
+      internalID: 1298744035216644985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_4
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db127db2865069f00800000000000000
+      internalID: 1123091102045774269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_5
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b516f23b295ef92c0800000000000000
+      internalID: -4422563890820325029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_6
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbd2195625d9b330800000000000000
+      internalID: 3727244527305677770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_7
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef069fb4cd2448c0800000000000000
+      internalID: -4016034644656517152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_8
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5f4f7d6df4ff810800000000000000
+      internalID: 1801246160136238569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_9
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4a1fda8a3d8f390800000000000000
+      internalID: -7784239234483641176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_10
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733a7ea804bbaf990800000000000000
+      internalID: -7351357555846175945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_11
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f706732d507d930800000000000000
+      internalID: 4167806380585025379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_12
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b27cc0aa8bb2e00800000000000000
+      internalID: 1021112781027879716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_13
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782a6f85521f6c670800000000000000
+      internalID: 8558793284572848775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_14
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6385e1086d7622ef0800000000000000
+      internalID: -134430867897558986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_15
+      rect:
+        serializedVersion: 2
+        x: 3750
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1990c72ee41cd40a0800000000000000
+      internalID: -6895642909882971759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_16
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e69190f10e5db160800000000000000
+      internalID: 7042888754701375201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_17
+      rect:
+        serializedVersion: 2
+        x: 4250
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b45ffb397cca2cd0800000000000000
+      internalID: -2582026615273859912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_18
+      rect:
+        serializedVersion: 2
+        x: 4500
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7368b2325ef7d00800000000000000
+      internalID: 972747983752148942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_19
+      rect:
+        serializedVersion: 2
+        x: 4750
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d695680a8132db40800000000000000
+      internalID: 5463483766869956307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_20
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32ca283e12d1adb0800000000000000
+      internalID: -4782310302057577921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_21
+      rect:
+        serializedVersion: 2
+        x: 5250
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7541fda6f667b710800000000000000
+      internalID: 1708947793276650875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_22
+      rect:
+        serializedVersion: 2
+        x: 5500
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1230d0916f2e1d960800000000000000
+      internalID: 7625125190725075745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_23
+      rect:
+        serializedVersion: 2
+        x: 5750
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b54dc58eb66c56d0800000000000000
+      internalID: -3000410283260951111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_24
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea9dba2c7eb7f1c0800000000000000
+      internalID: -4469894664639636766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_25
+      rect:
+        serializedVersion: 2
+        x: 6250
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722f05a08e5b3abf0800000000000000
+      internalID: -314207540775685593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_26
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8723c9972fb5f9e80800000000000000
+      internalID: -8169710102046297480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_27
+      rect:
+        serializedVersion: 2
+        x: 6750
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae0618b0eb56c760800000000000000
+      internalID: 7477765252014542504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_28
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93dc38e6ba6988cc0800000000000000
+      internalID: -3708548630101897927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_29
+      rect:
+        serializedVersion: 2
+        x: 7250
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c65049d9ec941000800000000000000
+      internalID: 5802027720398536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_30
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad51f1ab9b6cb3d50800000000000000
+      internalID: 6718181770147075546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_31
+      rect:
+        serializedVersion: 2
+        x: 7750
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52384ad980a024380800000000000000
+      internalID: -8988610874157268187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_32
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749156113c2f9a540800000000000000
+      internalID: 5019810179305511239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_33
+      rect:
+        serializedVersion: 2
+        x: 8250
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75dc1ad2996a46fa0800000000000000
+      internalID: -5808334442575311529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_34
+      rect:
+        serializedVersion: 2
+        x: 8500
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b55614c2bab6b2f0800000000000000
+      internalID: -957372593812908617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_35
+      rect:
+        serializedVersion: 2
+        x: 8750
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f136d7f0deacad150800000000000000
+      internalID: 5898249781511021343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_36
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39570d6a1a98b29e0800000000000000
+      internalID: -1645069911492364909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindChime_spritesheet_9500x500_37
+      rect:
+        serializedVersion: 2
+        x: 9250
+        y: 0
+        width: 250
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5543eaffe293fd580800000000000000
+      internalID: -8800252272837774251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: af3e35118e9dab040ab4dc8ac5335062
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

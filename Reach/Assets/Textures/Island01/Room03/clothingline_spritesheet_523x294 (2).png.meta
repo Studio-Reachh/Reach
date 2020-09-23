@@ -1,0 +1,718 @@
+fileFormatVersion: 2
+guid: b8ae0020ba544a34a92719a28c992fc7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8892110716419488897
+    second: clothingline_spritesheet_523x294 (2)_0
+  - first:
+      213: -4454963344849007112
+    second: clothingline_spritesheet_523x294 (2)_1
+  - first:
+      213: 2349968535546947765
+    second: clothingline_spritesheet_523x294 (2)_2
+  - first:
+      213: 4900223627055966456
+    second: clothingline_spritesheet_523x294 (2)_3
+  - first:
+      213: -1180826157894311154
+    second: clothingline_spritesheet_523x294 (2)_4
+  - first:
+      213: -6710855271418846759
+    second: clothingline_spritesheet_523x294 (2)_5
+  - first:
+      213: 7957890676588563410
+    second: clothingline_spritesheet_523x294 (2)_6
+  - first:
+      213: -1911094302433776044
+    second: clothingline_spritesheet_523x294 (2)_7
+  - first:
+      213: 6785461447468332457
+    second: clothingline_spritesheet_523x294 (2)_8
+  - first:
+      213: -5181137808050465066
+    second: clothingline_spritesheet_523x294 (2)_9
+  - first:
+      213: 1568576370897327474
+    second: clothingline_spritesheet_523x294 (2)_10
+  - first:
+      213: 4709736305854778350
+    second: clothingline_spritesheet_523x294 (2)_11
+  - first:
+      213: -2979618704965310266
+    second: clothingline_spritesheet_523x294 (2)_12
+  - first:
+      213: -2835717306545544796
+    second: clothingline_spritesheet_523x294 (2)_13
+  - first:
+      213: 183850417140924296
+    second: clothingline_spritesheet_523x294 (2)_14
+  - first:
+      213: 1672182039007978117
+    second: clothingline_spritesheet_523x294 (2)_15
+  - first:
+      213: 6609053034488312996
+    second: clothingline_spritesheet_523x294 (2)_16
+  - first:
+      213: 5531252449685340357
+    second: clothingline_spritesheet_523x294 (2)_17
+  - first:
+      213: -7561620666484887689
+    second: clothingline_spritesheet_523x294 (2)_18
+  - first:
+      213: -6440011847906746381
+    second: clothingline_spritesheet_523x294 (2)_19
+  - first:
+      213: 4345966333141462479
+    second: clothingline_spritesheet_523x294 (2)_20
+  - first:
+      213: -399586018201696763
+    second: clothingline_spritesheet_523x294 (2)_21
+  - first:
+      213: -5981650453472197999
+    second: clothingline_spritesheet_523x294 (2)_22
+  - first:
+      213: -1636305450789890907
+    second: clothingline_spritesheet_523x294 (2)_23
+  - first:
+      213: 8045108678300853365
+    second: clothingline_spritesheet_523x294 (2)_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1176
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f734f547a60e89480800000000000000
+      internalID: -8892110716419488897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_1
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 1176
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd83e6f07acc22c0800000000000000
+      internalID: -4454963344849007112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_2
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1176
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8ee92bee3cc9020800000000000000
+      internalID: 2349968535546947765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_3
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 1176
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8a5a22d67110440800000000000000
+      internalID: 4900223627055966456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_4
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 1176
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03683d9ddcdc9fe0800000000000000
+      internalID: -1180826157894311154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 882
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1a500bfa04ed2a0800000000000000
+      internalID: -6710855271418846759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_6
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 882
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db447b586b107e60800000000000000
+      internalID: 7957890676588563410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_7
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 882
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e692b7bdd6a75e0800000000000000
+      internalID: -1911094302433776044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_8
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 882
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5357d4c3dca2e50800000000000000
+      internalID: 6785461447468332457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_9
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 882
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d65eca4d96e818b0800000000000000
+      internalID: -5181137808050465066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 588
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275186e06e3b4c510800000000000000
+      internalID: 1568576370897327474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_11
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 588
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb0c3887385c5140800000000000000
+      internalID: 4709736305854778350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_12
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 588
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8ee64139446a6d0800000000000000
+      internalID: -2979618704965310266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_13
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 588
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1eceb422285a8d0800000000000000
+      internalID: -2835717306545544796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_14
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 588
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ffd75fafa2d8200800000000000000
+      internalID: 183850417140924296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 294
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582ebd274b8c43710800000000000000
+      internalID: 1672182039007978117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_16
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 294
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4b466f7b218bb50800000000000000
+      internalID: 6609053034488312996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_17
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 294
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c001821cc4f2cc40800000000000000
+      internalID: 5531252449685340357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_18
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 294
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f6ae7211abf0790800000000000000
+      internalID: -7561620666484887689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_19
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 294
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff1630585b70a6a0800000000000000
+      internalID: -6440011847906746381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd24b4aa59ff4c30800000000000000
+      internalID: 4345966333141462479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_21
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 0
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50600ef22a2647af0800000000000000
+      internalID: -399586018201696763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_22
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 0
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1924c3eca98ecfca0800000000000000
+      internalID: -5981650453472197999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_23
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 0
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a412adacdcaa49e0800000000000000
+      internalID: -1636305450789890907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clothingline_spritesheet_523x294 (2)_24
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 0
+        width: 523
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574e885d7b7f5af60800000000000000
+      internalID: 8045108678300853365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f6b82046e0c2e60438dab86e5d2dca52
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
