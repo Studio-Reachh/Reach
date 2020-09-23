@@ -24,7 +24,10 @@ public class ParticleCollision : MonoBehaviour
             Vector3 normal = collisionEvent.normal;
 
             GameObject spawnedGO = Instantiate(GameObjectToSpawn, pos, Quaternion.identity);
+            
             Destroy(spawnedGO, 2);
         }
+
+        FindObjectOfType<AudioManager>().PlaySound("Droplet");
     }
 }

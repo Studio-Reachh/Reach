@@ -17,6 +17,9 @@ public class Boat : Interactable
     public bool changeSprite;
     public Sprite sprite;
 
+    [Header("Audio")]
+    public string Audio;
+
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -56,7 +59,7 @@ public class Boat : Interactable
 
             if (LevelName != string.Empty)
             {
-                _levelLoader.LoadNextLevel(LevelName, true);
+                _levelLoader.LoadNextLevel(LevelName, true, Audio);
             }
         }
 

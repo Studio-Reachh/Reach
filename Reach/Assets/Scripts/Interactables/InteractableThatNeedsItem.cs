@@ -46,9 +46,14 @@ public class InteractableThatNeedsItem : Interactable
         {
             succesfulInteraction = true;
             _hasItem = true;
-   
+
+            FindObjectOfType<AudioManager>().PlaySound("Item placed right");
+
             AddItem();
             SaveHandler.SaveLevel(this.name, ItemSaveProperty, true);
+        } else
+        {
+            FindObjectOfType<AudioManager>().PlaySound("Item placed wrong");
         }
 
         return succesfulInteraction;

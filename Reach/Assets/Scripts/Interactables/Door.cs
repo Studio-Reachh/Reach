@@ -16,6 +16,9 @@ public class Door : Interactable
     [Header("Play Cutscene")]
     public bool PlayCutscene;
 
+    [Header("Audio")]
+    public string Audio;
+
     private void Awake()
     {
         _levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
@@ -31,8 +34,13 @@ public class Door : Interactable
             {
                 if (LevelName != string.Empty)
                 {
-                    _levelLoader.LoadNextLevel(LevelName, PlayCutscene);
+                    FindObjectOfType<AudioManager>().PlaySound("Unlocked");
+
+                    _levelLoader.LoadNextLevel(LevelName, PlayCutscene, Audio);
                     succesfullInteraction = true;
+                } else
+                {
+                    FindObjectOfType<AudioManager>().PlaySound("Locked");
                 }
             }
         }
@@ -40,7 +48,7 @@ public class Door : Interactable
         {
             if (LevelName != string.Empty)
             {
-                _levelLoader.LoadNextLevel(LevelName, PlayCutscene);
+                _levelLoader.LoadNextLevel(LevelName, PlayCutscene, Audio);
                 succesfullInteraction = true;
             }
         }

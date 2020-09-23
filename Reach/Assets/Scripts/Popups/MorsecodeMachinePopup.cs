@@ -185,6 +185,8 @@ public class MorsecodeMachinePopup : PopupMenu
     {
         if (UIText)
         {
+            FindObjectOfType<AudioManager>().PlaySound("Morsecode message");
+
             while (characterIndex < TextToWrite.Length)
             {
                 //write message letter by letter
