@@ -129,7 +129,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 5
+  bundleVersion: 6
   preloadedAssets:
   - {fileID: 11400000, guid: 6f8e389a0c20c0443b452ec751c74c0b, type: 2}
   metroInputSource: 0
@@ -176,7 +176,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.StudioReach.ReachTheGame
   buildNumber: {}
-  AndroidBundleVersionCode: 5
+  AndroidBundleVersionCode: 6
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
