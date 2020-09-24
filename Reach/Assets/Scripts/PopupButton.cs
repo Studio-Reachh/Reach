@@ -1,8 +1,4 @@
-﻿using System;
-using UnityEditor;
-using UnityEngine;
-
-public class PopupButton : Interactable
+﻿public class PopupButton : Interactable
 {
     public PopupMenu PopupMenu;
 
