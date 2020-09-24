@@ -4,10 +4,12 @@
 
     public override bool Interact(Item item)
     {
-        bool successfulInteraction = true;
+        if (item)
+        {
+            return false;
+        }
 
         PopupMenu.OpenPopupMenu();
-
-        return successfulInteraction;
+        return true;
     }
 }
