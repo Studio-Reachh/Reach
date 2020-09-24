@@ -5012,7 +5012,7 @@ MonoBehaviour:
   KeyGameobject: 
   KeyProperty: 
   PlayCutscene: 0
-  Audio: Footsteps
+  Audio: 
 --- !u!61 &343522592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6782,7 +6782,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.71, y: 1.1303906}
+    oldSize: {x: 3.71, y: 1.13}
     newSize: {x: 3.71, y: 1.13}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

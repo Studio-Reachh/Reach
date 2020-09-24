@@ -28,6 +28,11 @@ public class Door : Interactable
     {
         bool succesfullInteraction = false;
 
+        if (item)
+        {
+            return false;
+        }
+
         if (IsDoorLocked)
         {
             if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, KeyGameobject, KeyProperty, out bool isUnlocked))

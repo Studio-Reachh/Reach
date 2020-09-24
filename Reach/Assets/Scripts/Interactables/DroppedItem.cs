@@ -22,6 +22,11 @@ public class DroppedItem : Interactable
     {
         bool successfulInteraction = false;
 
+        if (item)
+        {
+            return false;
+        }
+
         if (Item)
         {
             Inventory.AddItem(Item);
