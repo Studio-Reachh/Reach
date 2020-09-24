@@ -48,6 +48,11 @@ public class SaveHandler : MonoBehaviour
 
     private void SaveCurrentSceneName()
     {
+        if (SceneManager.GetActiveScene().name.ToLower() == "startmenu")
+        {
+            return;
+        }
+
         PlayerPrefs.SetString("LastActiveSceneName", SceneManager.GetActiveScene().name);
     }
 

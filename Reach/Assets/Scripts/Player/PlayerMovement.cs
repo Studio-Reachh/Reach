@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
             Z_Pos = transform.position.z
         };
 
-        //SaveHandler.SavePlayerData(playerData);
+        SaveHandler.SavePlayerData(playerData);
     }
 
     private void Awake()
