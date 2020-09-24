@@ -19,6 +19,18 @@ public class StartMenu : MonoBehaviour
 
     public void ContinueGame()
     {
-        _levelLoader.LoadNextLevel("Room01", false, Audio);
+        //No player data available, so there is no save data
+        if (SaveHandler.GetPlayerData() == null)
+        {
+            return;
+        }
+
+        string lastActiveSceneName = SaveHandler.GetLastActiveSceneName();
+        if (lastActiveSceneName.ToLower() == "startmenu")
+        {
+            return;
+        }
+
+        _levelLoader.LoadNextLevel(lastActiveSceneName, false, Audio);
     }
 }
