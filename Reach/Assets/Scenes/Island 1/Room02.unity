@@ -281,6 +281,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   greenLight: {fileID: 21300000, guid: b14fbc0b1c7956a47a4062dd1967790a, type: 3}
+  LevelWherePuzzleHasBeenSolved: Room02
+  NameOfPuzzleThatHasBeenSolved: MorsecodeMachine[canvas]
+  NameOfItemPropertyThatHasBeenSolved: MorsecodeSend
 --- !u!1 &208577644
 GameObject:
   m_ObjectHideFlags: 0
@@ -5741,6 +5744,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   greenLight: {fileID: 21300000, guid: a71b9ce90652ad048bef6b2a61163d74, type: 3}
+  LevelWherePuzzleHasBeenSolved: Room02
+  NameOfPuzzleThatHasBeenSolved: MorsecodeMachine[canvas]
+  NameOfItemPropertyThatHasBeenSolved: MorsecodeSend
 --- !u!212 &516871407
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7085,6 +7091,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   greenLight: {fileID: 21300000, guid: 177dafaf339a569439a9bf1bd236ab38, type: 3}
+  LevelWherePuzzleHasBeenSolved: Room02
+  NameOfPuzzleThatHasBeenSolved: MorsecodeMachine[canvas]
+  NameOfItemPropertyThatHasBeenSolved: MorsecodeSend
 --- !u!212 &1353423240
 SpriteRenderer:
   m_ObjectHideFlags: 0

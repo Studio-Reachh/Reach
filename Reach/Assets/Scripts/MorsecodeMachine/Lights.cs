@@ -4,10 +4,16 @@ using UnityEngine.UI;
 
 public class Lights : MonoBehaviour
 {
-    [Header("sprites")]
-    public Sprite greenLight;
     private Image _imageRenderer;
     private SpriteRenderer _spriteRenderer;
+
+    [Header("sprites")]
+    public Sprite greenLight;
+
+    [Header("Lights Turn Green When")]
+    public string LevelWherePuzzleHasBeenSolved;
+    public string NameOfPuzzleThatHasBeenSolved;
+    public string NameOfItemPropertyThatHasBeenSolved;
 
     private void Awake()
     {
@@ -17,7 +23,7 @@ public class Lights : MonoBehaviour
 
     void Update()
     {
-        if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, "MorsecodeMachine[canvas]", "MorsecodeSend", out bool hasMorsecodeMessage))
+        if (SaveHandler.GetValueByProperty(LevelWherePuzzleHasBeenSolved, NameOfPuzzleThatHasBeenSolved, NameOfItemPropertyThatHasBeenSolved, out bool hasMorsecodeMessage))
         {
             if (greenLight)
             {
