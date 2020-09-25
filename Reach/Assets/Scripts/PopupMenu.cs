@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class PopupMenu : MonoBehaviour
+public class PopupMenu : MonoBehaviour
 {
     public GameObject popupMenuUI;
     public static bool isPopupOpen;
