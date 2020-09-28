@@ -10,9 +10,27 @@ public enum FacingDirection
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
+    public float BaseSpeed;
+    private float _currentSpeed;
+
+    public bool ClickedOnLadder = false;
+    public bool _isMovingOnLadder = false;
+
+    public bool DestinationReached = false;
 
     private Vector3 _targetPosition;
+    public Vector3 TargetPosition
+    {
+        get
+        {
+            return _targetPosition;
+        }
+        set
+        {
+            _targetPosition = value;
+            DestinationReached = false;
+        }
+    }
 
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollider2D;
@@ -47,25 +65,40 @@ public class PlayerMovement : MonoBehaviour
         _boxCollider2D = GetComponent<BoxCollider2D>();
         _animator = GetComponent<Animator>();
 
-        _targetPosition = transform.position;
+        TargetPosition = transform.position;
     }
 
     private Interactable _interactableToMoveTowards;
+
+
+    public bool IsGameobjectAtPosition(Vector2 position, string layerName, out RaycastHit2D raycastHit)
+    {
+        //Vector2 mousePosAsworldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        raycastHit = Physics2D.Raycast(position, Vector2.zero, Mathf.Infinity, LayerMask.GetMask(layerName));
+        return raycastHit;
+    }
 
     private void Update()
     {
         if (PopupMenu.isPopupOpen)
         {
-            speed = 0;
+            _currentSpeed = 0;
             return;
-        } else
+        }
+        else
         {
-            speed = 1.5f;
+            _currentSpeed = BaseSpeed;
         }
         _spriteRenderer.flipX = FacingDirection == FacingDirection.Left ? true : false;
-
-        if (!ItemSlot.IsDragging && Input.GetKeyDown(KeyCode.Mouse0) && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
+        if (!_isMovingOnLadder && !ItemSlot.IsDragging && Input.GetKeyDown(KeyCode.Mouse0) && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
         {
+            //Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //if (_boxCollider2D.bounds.Contains(new Vector3(clickPos.x, clickPos.y, transform.position.z)))
+            //{
+            //    print("clicked on player");
+            //    return;
+            //}
+            
             Interactable interactableToMoveTowards = Interactable.GetInteractableAtMousePosition();
             if (interactableToMoveTowards)
             {
@@ -74,32 +107,32 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (transform.position.x <= collider.bounds.min.x)
                     {
-                        _targetPosition = collider.bounds.min;
+                        TargetPosition = collider.bounds.min;
                     }
                     else if (transform.position.x >= collider.bounds.max.x)
                     {
-                        _targetPosition = collider.bounds.max;
+                        TargetPosition = collider.bounds.max;
                     }
                     else
                     {
-                        _targetPosition = transform.position;
+                        TargetPosition = transform.position;
                     }
                 }
                 else
                 {
-                    _targetPosition = interactableToMoveTowards.transform.position;
+                    TargetPosition = interactableToMoveTowards.transform.position;
                 }
 
                 _interactableToMoveTowards = interactableToMoveTowards;
             }
             else
             {
-                _targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                TargetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 _interactableToMoveTowards = null;
             }
 
             Vector2 rayDirection = Vector2.zero;
-            if (_targetPosition.x < transform.position.x)
+            if (TargetPosition.x < transform.position.x)
             {
                 if (FacingDirection == FacingDirection.Right)
                 {
@@ -109,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
 
                 rayDirection = Vector2.left;
             }
-            else if (_targetPosition.x > transform.position.x)
+            else if (TargetPosition.x > transform.position.x)
             {
                 if (FacingDirection == FacingDirection.Left)
                 {
@@ -120,42 +153,118 @@ public class PlayerMovement : MonoBehaviour
                 rayDirection = Vector2.right;
             }
 
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, Mathf.Abs(_targetPosition.x - transform.position.x), LayerMask.GetMask("Obstacle"));
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, Mathf.Abs(TargetPosition.x - transform.position.x), LayerMask.GetMask("Obstacle"));
             if (hit)
             {
+                if (hit.distance < 1)
+                {
+                    print(hit.distance);
+                }
+
                 if (rayDirection == Vector2.left)
                 {
-                    _targetPosition = new Vector2(hit.point.x + _boxCollider2D.bounds.size.x / 2, _targetPosition.y);
+                    TargetPosition = new Vector2(hit.point.x + _boxCollider2D.bounds.size.x / 1.88f, TargetPosition.y);
                 }
                 else if (rayDirection == Vector2.right)
                 {
-                    _targetPosition = new Vector2(hit.point.x - _boxCollider2D.bounds.size.x / 2, _targetPosition.y);
+                    TargetPosition = new Vector2(hit.point.x - _boxCollider2D.bounds.size.x / 1.88f, TargetPosition.y);
                 }
 
                 _interactableToMoveTowards = null;
             }
+
+            if (IsGameobjectAtPosition(Camera.main.ScreenToWorldPoint(Input.mousePosition), "Ladder", out RaycastHit2D rayHit))
+            {
+                ClickedOnLadder = true;
+            }
+            else
+            {
+                ClickedOnLadder = false;
+            }
         }
 
-        if (transform.position.x != _targetPosition.x && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
+        if (!DestinationReached)
         {
-            _animator.SetBool("IsWalking", true);
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(_targetPosition.x, transform.position.y, transform.position.z), Time.deltaTime * speed);
-        }
-        else if (transform.position.x == _targetPosition.x)
-        {
-            if (_interactableToMoveTowards)
+            if (transform.position.x != TargetPosition.x && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
             {
-                if (_interactableToMoveTowards.UseGrabAnimOnInteract)
+                _animator.SetBool("IsWalking", true);
+
+                if (_isMovingOnLadder)
                 {
-                    _animator.SetBool("IsGrabbingUp", true);
+                    transform.position = Vector3.MoveTowards(transform.position, new Vector3(TargetPosition.x, TargetPosition.y, transform.position.z), Time.deltaTime * _currentSpeed);
                 }
                 else
                 {
-                    InteractWithInteractable();
+                    transform.position = Vector3.MoveTowards(transform.position, new Vector3(TargetPosition.x, transform.position.y, transform.position.z), Time.deltaTime * _currentSpeed);
+                }
+
+                Vector2 rayDirection = FacingDirection == FacingDirection.Left ? Vector2.left : Vector2.right;
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, Mathf.Abs(TargetPosition.x - transform.position.x), LayerMask.GetMask("Obstacle"));
+                if (hit)
+                {
+                    if (rayDirection == Vector2.left)
+                    {
+                        TargetPosition = new Vector2(hit.point.x + _boxCollider2D.bounds.size.x / 1.88f, TargetPosition.y);
+                    }
+                    else if (rayDirection == Vector2.right)
+                    {
+                        TargetPosition = new Vector2(hit.point.x - _boxCollider2D.bounds.size.x / 1.88f, TargetPosition.y);
+                    }
+
+                    _interactableToMoveTowards = null;
                 }
             }
+            else
+            {
+                if (_isMovingOnLadder)
+                {
+                    if (transform.position.x == TargetPosition.x && transform.position.y == TargetPosition.y)
+                    {
+                        _animator.SetBool("IsWalking", false);
+                        _isMovingOnLadder = false;
+                        DestinationReached = true;
+                    }
+                }
+                else
+                {
+                    if (transform.position.x == TargetPosition.x)
+                    {
+                        if (ClickedOnLadder && IsGameobjectAtPosition(transform.position, "Ladder", out RaycastHit2D raycastHit))
+                        {
+                            _isMovingOnLadder = true;
+                            if (raycastHit.transform.name.ToLower() == "under")
+                            {
+                                //Search for above
+                                TargetPosition = raycastHit.transform.parent.Find("Above").position;
+                            }
+                            else if (raycastHit.transform.name.ToLower() == "above")
+                            {
+                                //Search for under
+                                TargetPosition = raycastHit.transform.parent.Find("Under").position;
+                            }
+                        }
+                        else
+                        {
+                            if (_interactableToMoveTowards)
+                            {
+                                if (_interactableToMoveTowards.UseGrabAnimOnInteract)
+                                {
+                                    _animator.SetBool("IsGrabbingUp", true);
+                                }
+                                else
+                                {
+                                    InteractWithInteractable();
+                                }
+                            }
 
-            _animator.SetBool("IsWalking", false);
+                            DestinationReached = true;
+                        }
+
+                        ClickedOnLadder = false;
+                        _animator.SetBool("IsWalking", false);
+                    }
+                }
+            }
         }
     }
 

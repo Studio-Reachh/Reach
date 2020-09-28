@@ -6998,14 +6998,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (Shadow)
       objectReference: {fileID: 0}
-    - target: {fileID: 6929481858191439097, guid: 851284c57957c5041943a682efe54c2b, type: 3}
-      propertyPath: FacingDirection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6929481858191439098, guid: 851284c57957c5041943a682efe54c2b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1
@@ -7049,6 +7041,14 @@ PrefabInstance:
     - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 851284c57957c5041943a682efe54c2b, type: 3}

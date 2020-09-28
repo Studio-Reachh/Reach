@@ -253,7 +253,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/nmove/OneDrive/Bureaublad/Reach_keystore.keystore
+  AndroidKeystoreName: '{dedicated}: Desktop/Reach_keystore.keystore'
   AndroidKeyaliasName: reach2020
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
