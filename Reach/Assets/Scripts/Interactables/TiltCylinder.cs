@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TiltCylinder : MonoBehaviour
 {
+    public Axis Axis;
     public float MaxSpeed;
     private float _currentSpeed;
 
@@ -33,12 +34,33 @@ public class TiltCylinder : MonoBehaviour
             rayDirection = Vector2.right;
         }
 
-        RaycastHit2D rayHitInfo = Physics2D.Raycast(transform.position, rayDirection, 1.1f, LayerMask.GetMask("Player"));
-        if (rayHitInfo)
+        int layerMask = -1;
+
+        if (Axis == Axis.Horizontal)
         {
-            return;
+            layerMask = LayerMask.GetMask("Player");
+        } else
+        {
+            layerMask = (1 << LayerMask.NameToLayer("Ladder") | (1 << LayerMask.NameToLayer("Obstacle")));
+        }
+
+        RaycastHit2D[] rayHitInfo = Physics2D.RaycastAll(transform.position, rayDirection, 1.1f, layerMask);
+        for (int i = 0; i < rayHitInfo.Length; i++)
+        {
+            RaycastHit2D rayHit = rayHitInfo[i];
+
+            if (rayHit.transform != null && (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Ladder") || (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Obstacle") && rayHit.transform.tag == "Barrier") || rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Player")))
+            {
+                return;
+            }
         }
 
         transform.position = new Vector3(moveTowardsPos_X, transform.position.y, transform.position.z);
     }
+}
+
+public enum Axis 
+{ 
+    Horizontal, 
+    Vertical
 }

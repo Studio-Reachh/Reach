@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.65
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e51124265ed6749938dc09e09f3e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Axis: 0
   MaxSpeed: 4
   _leftPos: {fileID: 1711583097}
   _rightPos: {fileID: 715271561}
@@ -1210,6 +1211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1912759588}
   - component: {fileID: 1912759589}
+  - component: {fileID: 1912759590}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -1282,3 +1284,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1912759590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912759587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8047e6ce48335044c8e1292c04822efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseGrabAnimOnInteract: 1
+  LevelName: Room04
+  IsDoorLocked: 0
+  KeyGameobject: 
+  KeyProperty: 
+  PlayCutscene: 0
+  Audio: 
