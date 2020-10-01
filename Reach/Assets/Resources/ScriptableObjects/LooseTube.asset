@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b6ea22f9b791d4da3a1c53e2fa16bc, type: 3}
   m_Name: LooseTube
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: a9ba9bda53258884f8cccebddd22b240, type: 3}
+  Image: {fileID: 21300000, guid: 95e67c658d0a26941ae84130cef54b86, type: 3}
   DestroyOnSuccessfulUse: 1
