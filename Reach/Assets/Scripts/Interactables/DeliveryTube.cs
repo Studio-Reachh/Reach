@@ -18,6 +18,7 @@ public class DeliveryTube : Interactable
     [Header("Change Sprite")]
     public bool changeSprite;
     public Sprite sprite;
+    public GameObject popupSprite;
 
     private void Update()
     {
@@ -51,6 +52,7 @@ public class DeliveryTube : Interactable
         else
         {
             _spriteRenderer.enabled = true;
+            popupSprite.SetActive(true);
         }
     }
 

@@ -9,10 +9,34 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: c172de352a348d746990dd238b9b3c3c
   - enabled: 1
+    path: Assets/Scenes/Island 1/Room01.unity
+    guid: 3f5dca224d0f66144a1662f5d61dd7a6
+  - enabled: 1
+    path: Assets/Scenes/Island 1/Room02.unity
+    guid: e2bcae6d8c333fd4d81e8d73b7953a78
+  - enabled: 1
+    path: Assets/Scenes/Island 1/Room03.unity
+    guid: cdc67f3672863594c9288d9d744e89a0
+  - enabled: 1
     path: Assets/Scenes/Island 2/Room04.unity
     guid: fc2913e1e38cce749bcf71d7be88f8a3
   - enabled: 1
     path: Assets/Scenes/Island 2/Room05.unity
     guid: 44ea89d0a906b4c4c9a13fec7a0b1fb4
+  - enabled: 1
+    path: Assets/Scenes/Island 2/Room06.unity
+    guid: 993514dc9351c9546b7b02e9f1c5e6ed
+  - enabled: 1
+    path: Assets/Scenes/Island 2/Room07.unity
+    guid: 24fc4a41a128c8d43a7b2ae54d01f352
+  - enabled: 1
+    path: Assets/Scenes/Island 2/Room08.unity
+    guid: f5896f55068cc2b47a2c0b5fced09e17
+  - enabled: 1
+    path: Assets/Scenes/Island 2/Room09.unity
+    guid: 682414ad43eca034f86b85b9cf696818
+  - enabled: 1
+    path: Assets/Scenes/Island 2/Room10.unity
+    guid: 4175e5245ba5deb478f246e1c7337055
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 6f8e389a0c20c0443b452ec751c74c0b, type: 2}
