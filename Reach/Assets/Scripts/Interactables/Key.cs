@@ -5,9 +5,6 @@ public class Key : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Vector2 _movementOnAxis;
     private bool _hasKeyFallen = false;
-    private float _slideBackKey;
-
-    public float SlideBackPosX = 2;
 
     public float Speed;
 
@@ -33,17 +30,6 @@ public class Key : MonoBehaviour
         if (collision.gameObject.name == "floor")
         {
             _hasKeyFallen = true;
-        }
-
-        if(collision.gameObject.tag == "Barrier")
-        {
-            var topOfBarrier = collision.contacts[0].normal;
-
-            if (topOfBarrier.y < 0)
-            {
-                _slideBackKey = transform.position.x - SlideBackPosX;
-                transform.position = new Vector2(_slideBackKey, transform.position.y);
-            }
         }
     }
 
