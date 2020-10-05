@@ -9,6 +9,9 @@ public class DeliveryTubeReceived : MonoBehaviour
     public GameObject GameobjectToReceive;
     public float DistanceForCollision;
 
+    [Header("Close Popup")]
+    public PopupMenu Popup;
+
     public void Awake()
     {
         if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, "Pipe[image]", "HasBeenDelivered", out bool hasBeenDelivered))
@@ -34,6 +37,12 @@ public class DeliveryTubeReceived : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().PlaySound("Item placed right");
             SaveHandler.SaveLevel("Pipe[image]", "HasBeenDelivered", true);
+
+            if (Popup)
+            {
+                Popup.ClosePopupMenu();
+            }
+
             Destroy(GameobjectToReceive);
         }
     }
