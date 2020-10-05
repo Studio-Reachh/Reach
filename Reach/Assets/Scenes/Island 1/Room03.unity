@@ -1045,6 +1045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (Shadow)
       objectReference: {fileID: 0}
+    - target: {fileID: 6929481858191439097, guid: 851284c57957c5041943a682efe54c2b, type: 3}
+      propertyPath: BaseSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439098, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_SortingOrder
       value: 4
@@ -1788,16 +1792,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1085426659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8eddc0c3ab23f84caace4558e19abc0, type: 3}
+  m_Script: {fileID: 11500000, guid: 67affb4fdda95684fa806a059bce8cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseGrabAnimOnInteract: 0
-  _spriteRenderer: {fileID: 1085426662}
+  UseGrabAnimOnInteract: 1
   ItemSaveProperty: HasOar
   ItemNeeded: {fileID: 11400000, guid: 4983bedf2bf5ece47b52fce0bdcfc10e, type: 2}
-  LevelName: StartMenu
   changeSprite: 1
   sprite: {fileID: 21300000, guid: c27b60761ede84c48a0c1da5365e9ee9, type: 3}
+  LevelName: Room04
+  IsDoorLocked: 1
+  KeyGameobject: Boat
+  KeyProperty: HasOar
+  PlayCutscene: 1
   Audio: 
 --- !u!61 &1085426661
 BoxCollider2D:
@@ -1816,8 +1823,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.72, y: 3.3500001}
-    newSize: {x: 10.71, y: 3.35}
+    oldSize: {x: 10.71, y: 4.037168}
+    newSize: {x: 10.71, y: 4.037168}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1865,12 +1872,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4bfdf2d70d96b21459e59265ddc0ee7c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2419b3dc3fd79a848b801102a1779d79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.71, y: 3.35}
+  m_Size: {x: 10.71, y: 4.037168}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1884,7 +1891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085426659}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.430502, y: -3.1741283, z: 0}
+  m_LocalPosition: {x: 17.48, y: -2.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1635837481}

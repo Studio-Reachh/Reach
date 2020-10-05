@@ -527,6 +527,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &258944615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258944616}
+  m_Layer: 0
+  m_Name: Barriers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &258944616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258944615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1042521749}
+  - {fileID: 1247835495}
+  m_Father: {fileID: 990577108}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &282257769
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +787,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1047856216}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &471951298
 GameObject:
@@ -900,7 +932,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1047856216}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &603377162
 BoxCollider2D:
@@ -1023,13 +1055,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a903d8ee52352ff48a583504ff35dccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsButtonDown: 0
   ButtonPressed: {fileID: 21300000, guid: 125580a413017d543bc0cd6aa663de31, type: 3}
   ButtonUnpressed: {fileID: 21300000, guid: a94cd8feaf2f8ec4e8d6b6efa085fe7d, type: 3}
-  Barrier: {fileID: 1042521748}
-  Speed: 4
-  BarrierAxis: 1
-  xPos: 0
-  yPos: 1.5
 --- !u!1 &844133462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,7 +1292,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1047856216}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905021513
 GameObject:
@@ -1438,6 +1466,7 @@ Transform:
   - {fileID: 1047856216}
   - {fileID: 471951299}
   - {fileID: 1098478652}
+  - {fileID: 258944616}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1533,6 +1562,7 @@ GameObject:
   - component: {fileID: 1042521749}
   - component: {fileID: 1042521751}
   - component: {fileID: 1042521750}
+  - component: {fileID: 1042521752}
   m_Layer: 8
   m_Name: BarrierLeft
   m_TagString: Barrier
@@ -1548,10 +1578,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042521748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.267, y: -2.2, z: -1}
+  m_LocalPosition: {x: -6.338839, y: -1.9956942, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1047856216}
+  m_Father: {fileID: 258944616}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1042521750
@@ -1631,6 +1661,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1042521752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042521748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2389e5641f9fc14eb3b348cbe1ec952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BarrierStartPositionY: -2.27
+  BarrierEndPositionY: 1.77
+  Speed: 4
+  SlideObjectBackDistance: 0.5
+  TiltObject: {fileID: 2102689481}
+  Button: {fileID: 842773022}
 --- !u!1 &1047856215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,8 +1706,6 @@ Transform:
   m_LocalPosition: {x: -2.0718389, y: 0.20430605, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1042521749}
-  - {fileID: 1247835495}
   - {fileID: 603377161}
   - {fileID: 1910525267}
   - {fileID: 441036977}
@@ -1774,6 +1820,7 @@ GameObject:
   - component: {fileID: 1247835495}
   - component: {fileID: 1247835497}
   - component: {fileID: 1247835496}
+  - component: {fileID: 1247835498}
   m_Layer: 8
   m_Name: BarrierRight
   m_TagString: Barrier
@@ -1789,10 +1836,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247835494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.548, y: -2.21, z: -1}
+  m_LocalPosition: {x: -1.5238389, y: -2.005694, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1047856216}
+  m_Father: {fileID: 258944616}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1247835496
@@ -1872,6 +1919,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1247835498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247835494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2389e5641f9fc14eb3b348cbe1ec952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BarrierStartPositionY: -2.27
+  BarrierEndPositionY: 1.77
+  Speed: 4
+  SlideObjectBackDistance: 0.5
+  TiltObject: {fileID: 2102689481}
+  Button: {fileID: 1575437937}
 --- !u!1 &1347006875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,13 +2519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a903d8ee52352ff48a583504ff35dccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsButtonDown: 0
   ButtonPressed: {fileID: 21300000, guid: e426bd0943040ac44a7a2614223ab248, type: 3}
   ButtonUnpressed: {fileID: 21300000, guid: 8e5c5116d13f6d541aa24fe4a0d41aae, type: 3}
-  Barrier: {fileID: 1247835494}
-  Speed: 4
-  BarrierAxis: 1
-  xPos: 0
-  yPos: 1.5
 --- !u!1 &1642540948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,7 +2723,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1047856216}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1910525266
 GameObject:
@@ -2693,7 +2754,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1047856216}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1910525268
 BoxCollider2D:
@@ -2791,7 +2852,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: a45ea00237111b04aa552393f339c065, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2974,7 +3035,6 @@ GameObject:
   - component: {fileID: 2102689483}
   - component: {fileID: 2102689484}
   - component: {fileID: 2102689485}
-  - component: {fileID: 2102689486}
   m_Layer: 0
   m_Name: bottomCylinder
   m_TagString: Untagged
@@ -3089,27 +3149,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6361635, y: 2.8057241}
   m_EdgeRadius: 0
---- !u!50 &2102689486
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102689481}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!1 &2146321001
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,5 +3177,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1047856216}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

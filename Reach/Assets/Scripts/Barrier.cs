@@ -12,6 +12,10 @@ public class Barrier : MonoBehaviour
 
     [Header("Object that you dont want getting stuck")]
     public GameObject TiltObject;
+
+    [Header("What button is triggered")]
+    public Button Button;
+
     private void Update()
     {
         RaycastHit2D[] rayHitInfo = Physics2D.RaycastAll(transform.position, Vector2.down, 2f);
@@ -29,15 +33,30 @@ public class Barrier : MonoBehaviour
             }
         }
 
-        if (!PopupMenu.isPopupOpen)
+        if (Button)
         {
-            if (LeverPopup.IsLeverDown)
+            if (Button.IsButtonDown)
             {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, BarrierEndPositionY), Speed * Time.fixedDeltaTime);
             }
             else
             {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, BarrierStartPositionY), Speed * Time.fixedDeltaTime);
+            }
+        } 
+        else
+        {
+            if (!PopupMenu.isPopupOpen)
+            {
+
+                if (LeverPopup.IsLeverDown)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, BarrierEndPositionY), Speed * Time.fixedDeltaTime);
+                }
+                else
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, BarrierStartPositionY), Speed * Time.fixedDeltaTime);
+                }
             }
         }
     }
