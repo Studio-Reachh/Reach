@@ -8,6 +8,7 @@ TagManager:
   - Crossfade
   - Background
   - MorsecodeMachine
+  - Barrier
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,6 @@ TagManager:
   - Player
   - Ladder
   - Popup
-  - 
-  - 
   - 
   - 
   - 

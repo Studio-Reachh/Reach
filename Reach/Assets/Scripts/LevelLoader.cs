@@ -11,8 +11,11 @@ public class LevelLoader : MonoBehaviour
     public GameObject VideoplayerCanvas;
     public float transitionTime = 1f;
 
+    public static bool IsLoadingLevel = false;
+
     public void Awake()
     {
+        IsLoadingLevel = false;
         if (VideoplayerCanvas)
         {
             VideoplayerCanvas.SetActive(false);
@@ -20,6 +23,7 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadNextLevel(string sceneName, bool PlayCutscene, string Audio)
     {
+        IsLoadingLevel = true;
         if (Cutscene && PlayCutscene)
         {
             StartCoroutine(PlayCutSceneBeforeLoadingLevel(sceneName));

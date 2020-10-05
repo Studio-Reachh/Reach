@@ -109,6 +109,24 @@ public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         DragItem();
     }
 
+    private void OnApplicationPause(bool pause)
+    {
+        StopDragItem();
+        if (Item)
+        {
+            _imageElementForItem.enabled = true;
+        }
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        StopDragItem();
+        if (Item)
+        {
+            _imageElementForItem.enabled = true;
+        }
+    }
+
     public void OnPointerUp(PointerEventData eventData)
     {
         bool itemsSuccessfulyUsedForInteraction = false;

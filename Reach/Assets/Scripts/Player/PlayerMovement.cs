@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private float _currentSpeed;
 
     public bool ClickedOnLadder = false;
-    public bool _isMovingOnLadder = false;
+    public bool IsMovingOnLadder = false;
 
     public bool DestinationReached = false;
 
@@ -40,6 +40,32 @@ public class PlayerMovement : MonoBehaviour
     public FacingDirection FacingDirection;
 
     private void OnApplicationQuit()
+    {
+        PlayerData playerData = new PlayerData()
+        {
+            FacingDirection = this.FacingDirection,
+            X_Pos = transform.position.x,
+            Y_Pos = transform.position.y,
+            Z_Pos = transform.position.z
+        };
+
+        SaveHandler.SavePlayerData(playerData);
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        PlayerData playerData = new PlayerData()
+        {
+            FacingDirection = this.FacingDirection,
+            X_Pos = transform.position.x,
+            Y_Pos = transform.position.y,
+            Z_Pos = transform.position.z
+        };
+
+        SaveHandler.SavePlayerData(playerData);
+    }
+
+    private void OnApplicationPause(bool pause)
     {
         PlayerData playerData = new PlayerData()
         {
@@ -90,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
             _currentSpeed = BaseSpeed;
         }
         _spriteRenderer.flipX = FacingDirection == FacingDirection.Left ? true : false;
-        if (!_isMovingOnLadder && !ItemSlot.IsDragging && Input.GetKeyDown(KeyCode.Mouse0) && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
+        if (!LevelLoader.IsLoadingLevel && !IsMovingOnLadder && !ItemSlot.IsDragging && Input.GetKeyDown(KeyCode.Mouse0) && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
         {
             //Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             //if (_boxCollider2D.bounds.Contains(new Vector3(clickPos.x, clickPos.y, transform.position.z)))
@@ -189,7 +215,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 _animator.SetBool("IsWalking", true);
 
-                if (_isMovingOnLadder)
+                if (IsMovingOnLadder)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, new Vector3(TargetPosition.x, TargetPosition.y, transform.position.z), Time.deltaTime * _currentSpeed);
                 }
@@ -216,13 +242,31 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                if (_isMovingOnLadder)
+                if (IsMovingOnLadder)
                 {
                     if (transform.position.x == TargetPosition.x && transform.position.y == TargetPosition.y)
                     {
                         _animator.SetBool("IsWalking", false);
-                        _isMovingOnLadder = false;
+                        IsMovingOnLadder = false;
                         DestinationReached = true;
+
+                        if (IsGameobjectAtPosition(transform.position, "Ladder", out RaycastHit2D raycastHit))
+                        {
+                            Door ladderDoor = raycastHit.transform.gameObject.GetComponent<Door>();
+                            if (ladderDoor)
+                            {
+                                ladderDoor.Interact(null);
+                            }
+                        }
+
+                        //if (IsGameobjectAtPosition(transform.position, "Interactable", out RaycastHit2D rayHit))
+                        //{
+                        //    Door door = rayHit.transform.gameObject.GetComponent<Door>();
+                        //    if (door)
+                        //    {
+                        //        door.Interact(null);
+                        //    }
+                        //}
                     }
                 }
                 else
@@ -231,7 +275,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         if (ClickedOnLadder && IsGameobjectAtPosition(transform.position, "Ladder", out RaycastHit2D raycastHit))
                         {
-                            _isMovingOnLadder = true;
+                            IsMovingOnLadder = true;
                             if (raycastHit.transform.name.ToLower() == "under")
                             {
                                 //Search for above
