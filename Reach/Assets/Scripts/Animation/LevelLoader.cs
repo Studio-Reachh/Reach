@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
@@ -51,7 +52,7 @@ public class LevelLoader : MonoBehaviour
         VideoplayerCanvas.SetActive(true);
         Cutscene.Play();
 
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(Convert.ToSingle(Cutscene.clip.length));
 
         //Load Scene
         SceneManager.LoadScene(level);

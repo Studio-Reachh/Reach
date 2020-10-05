@@ -90,35 +90,6 @@ public class MorsecodeMachinePopup : PopupMenu
         }
     }
 
-    //public IEnumerator PlayMorsecodeMessage()
-    //{
-    //    while (!_morsecodeSolved)
-    //    {
-    //        foreach (var letter in MorsecodeSendMessage)
-    //        {
-    //            switch (letter)
-    //            {
-    //                case '.':
-    //                    Vibration.CreateOneShot(500);
-    //                    StartCoroutine(CameraShake.Shake(DotDuration, MagnitudeShake));
-    //                    yield return new WaitForSeconds(1.50f);
-    //                    break;
-
-    //                case '-':
-    //                    Vibration.CreateOneShot(2500);
-    //                    StartCoroutine(CameraShake.Shake(DashDuration, MagnitudeShake));
-    //                    yield return new WaitForSeconds(3.50f);
-    //                    break;
-
-    //                case ' ':
-    //                    yield return new WaitForSeconds(1);
-    //                    break;
-    //            }
-    //        }
-    //        yield return new WaitForSeconds(10);
-    //    }
-    //}
-
     public void KeyerInput()
     {
         //onmouse button down
@@ -133,6 +104,11 @@ public class MorsecodeMachinePopup : PopupMenu
         if(KeyerUpSprite)
         {
             KeyerImage.sprite = KeyerUpSprite;
+        }
+
+        if (!MorsecodeMachine.isMachineActive)
+        {
+            return;
         }
 
         if (!_morsecodeSolved)

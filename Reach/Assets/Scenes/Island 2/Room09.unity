@@ -3597,7 +3597,7 @@ MonoBehaviour:
   ItemNeeded: {fileID: 11400000, guid: ccbc2e322c6ae254ba8a753ed9c90a8e, type: 2}
   changeSprite: 1
   sprite: {fileID: 21300000, guid: 00921bb8cb1b9ae4bb437c660cb2e907, type: 3}
-  LevelName: Room01
+  LevelName: Room04
   IsDoorLocked: 1
   KeyGameobject: door
   KeyProperty: HasKey
