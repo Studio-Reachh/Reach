@@ -10,6 +10,9 @@ public enum FacingDirection
 
 public class PlayerMovement : MonoBehaviour
 {
+    public AudioSource AudioSource;
+    public List<AudioClip> MovementAudioClips;
+
     public float BaseSpeed;
     private float _currentSpeed;
 
@@ -345,6 +348,14 @@ public class PlayerMovement : MonoBehaviour
 
     public void WalkStepParticles(string foot)
     {
+        AudioClip randomAudioClip = MovementAudioClips[Random.Range(0, MovementAudioClips.Count - 1)];
+        if (randomAudioClip)
+        {
+            print("trap");
+            AudioSource.clip = randomAudioClip;
+            AudioSource.Play();
+        }
+
         //if (_spriteRenderer.flipX)
         //{
         //    if (foot.ToLower() == "left")
