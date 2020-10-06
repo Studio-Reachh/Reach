@@ -6,6 +6,8 @@ public class TiltCylinder : MonoBehaviour
     public float MaxSpeed;
     private float _currentSpeed;
 
+    public Animator CylinderAnimator;
+
     [SerializeField]
     private Transform _leftPos, _rightPos;
 
@@ -13,7 +15,27 @@ public class TiltCylinder : MonoBehaviour
 
     private void Update()
     {
+        if (PopupMenu.isPopupOpen)
+        {
+            if (CylinderAnimator)
+            {
+                CylinderAnimator.speed = 0;
+            }
+
+            return;
+        }
+
         Vector3 _tiltVector = Input.acceleration;
+
+        if (CylinderAnimator)
+        {
+            CylinderAnimator.speed = Mathf.Abs(_tiltVector.x);
+            if (CylinderAnimator.speed > 1)
+            {
+                CylinderAnimator.speed = 1;
+            }
+        }
+
         if (_tiltVector.x == 0)
         {
             return;
@@ -50,14 +72,13 @@ public class TiltCylinder : MonoBehaviour
         {
             RaycastHit2D rayHit = rayHitInfo[i];
 
-            if (rayHit.transform.parent.gameObject == this.gameObject)//Check if de root.gameobject werkt
+            if (rayHit.transform.parent && rayHit.transform.parent.gameObject == this.gameObject)//Check if de root.gameobject werkt
             {
                 continue;
             }
 
             if (rayHit.transform != null && (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Ladder") || (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Obstacle") && rayHit.transform.tag == "Barrier") || rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Player")))
             {
-                print(rayHit.transform.name);
                 return;
             }
         }
@@ -79,6 +100,18 @@ public class TiltCylinder : MonoBehaviour
                     print(rayHit.transform.name);
                     return;
                 }
+            }
+        }
+
+        if (CylinderAnimator)
+        {
+            if (_tiltVector.x < 0)
+            {
+                CylinderAnimator.SetBool("IsMovingRight", false);
+            }
+            else if (_tiltVector.x > 0)
+            {
+                CylinderAnimator.SetBool("IsMovingRight", true);
             }
         }
 

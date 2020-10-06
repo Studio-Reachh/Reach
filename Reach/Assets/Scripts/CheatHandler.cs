@@ -31,7 +31,7 @@ public class CheatHandler : MonoBehaviour
         }
         else if (currentSceneName == "Room05")
         {
-
+            ClearSceneRoom05();
         }
         else if (currentSceneName == "Room06")
         {
@@ -137,6 +137,15 @@ public class CheatHandler : MonoBehaviour
         {
             SaveHandler.SaveLevel("Pipe[image]", "HasBeenDelivered", true);
             Destroy(_deliveryPipe.gameObject);
+        }
+    }
+
+    private void ClearSceneRoom05()
+    {
+        TiltCylinder tiltCylinder = FindObjectOfType<TiltCylinder>();
+        if (tiltCylinder)
+        {
+            Destroy(tiltCylinder.gameObject);
         }
     }
 
