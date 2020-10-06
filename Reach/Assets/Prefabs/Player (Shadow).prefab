@@ -9948,9 +9948,8 @@ MonoBehaviour:
   MovementAudioClips:
   - {fileID: 8300000, guid: f89ffbddc6a85aa45a4556154740cb47, type: 3}
   - {fileID: 8300000, guid: 9484d167873905147968182c728ca2ee, type: 3}
-  - {fileID: 8300000, guid: 152f32282622b104989a1ffa2440a06f, type: 3}
   - {fileID: 8300000, guid: 58b14f55d81247e42ae40f7a16ba8594, type: 3}
-  BaseSpeed: 3
+  BaseSpeed: 4
   ClickedOnLadder: 0
   IsMovingOnLadder: 0
   DestinationReached: 0
@@ -10020,7 +10019,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
