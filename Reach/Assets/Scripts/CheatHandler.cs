@@ -107,7 +107,7 @@ public class CheatHandler : MonoBehaviour
     private void ClearSceneRoom03()
     {
         Item oarItem = Resources.Load<Item>("ScriptableObjects/Oar");
-        Boat boat = FindObjectOfType<Boat>();
+        InteractableAndSceneTransition boat = FindObjectOfType<InteractableAndSceneTransition>();
         if (boat)
         {
             boat.Interact(oarItem);

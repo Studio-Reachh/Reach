@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MorsecodeMachine : MonoBehaviour
 {
     [HideInInspector]
-    public bool isMachineActive = false;
+    public static bool isMachineActive = false;
 
     [Header("Sprites")]
     public Sprite morsecodeMachineActive;
@@ -26,9 +26,13 @@ public class MorsecodeMachine : MonoBehaviour
     {
         isMachineActive = true;
 
-        FindObjectOfType<AudioManager>().PlaySound("Morsecodemachine activates");
+        if (!SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, name, "soundHasPlayed", out bool hasPlayed))
+        {
+            FindObjectOfType<AudioManager>().PlaySound("Morsecodemachine activates");
+        }
+        SaveHandler.SaveLevel(this.name, "soundHasPlayed", true);
 
-        if(morsecodeMachineActive)
+        if (morsecodeMachineActive)
         {
             morsecodeMachineDeactive.sprite = morsecodeMachineActive;
         }

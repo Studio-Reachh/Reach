@@ -5,13 +5,6 @@ using UnityEngine.UI;
 public class MorsecodeMachinePopup : PopupMenu
 {
     //Change UI Sprites
-    [Header("Morsecodemachine")]
-    public MorsecodeMachine MorsecodeMachine;
-
-    [Header("ShakeCamera")]
-    public CameraShake CameraShake;
-    public float MagnitudeShake;
-
     [Header("Sprites")]
     public Sprite ActiveScreenSprite;
     public Image DeactiveScreenImage;
@@ -36,7 +29,7 @@ public class MorsecodeMachinePopup : PopupMenu
     public Text UITextSend;
     public string EndMessage;
 
-    private bool _morsecodeSolved, _messageReceived = false;
+    private bool _morsecodeSolved;
 
     private IEnumerator WriteMessageCoroutine;
 
@@ -44,7 +37,7 @@ public class MorsecodeMachinePopup : PopupMenu
     {
         WriteMessageCoroutine = WritingMessage(UITextReceive, MorsecodeReceivedMessage, TypeSpeed, MorsecodeReceivedPauseDuration, 0);
 
-        if (SaveHandler.GetValueByProperty("Room02", "MorsecodeMachine[canvas]", "MorsecodeSend", out bool morsecodeSolved))
+        if (SaveHandler.GetValueByProperty("Room02", this.name, "MorsecodeSend", out bool morsecodeSolved))
         {
             _morsecodeSolved = morsecodeSolved;
         }
@@ -74,9 +67,12 @@ public class MorsecodeMachinePopup : PopupMenu
 
         if (!_morsecodeSolved)
         {
-            if (!_messageReceived)
+            if (!SaveHandler.GetValueByProperty("Room02", this.name, "MessageReceived", out bool messageReceived))
             {
                 StartCoroutine(WriteMessageCoroutine);
+            } else
+            {
+                UITextReceive.text = MorsecodeReceivedMessage;
             }
         }
 
@@ -172,7 +168,8 @@ public class MorsecodeMachinePopup : PopupMenu
                 yield return new WaitForSeconds(TypeSpeed);
             }
 
-            _messageReceived = true;
+            SaveHandler.SaveLevel(this.name, "MessageReceived", true);
+
             yield return new WaitForSeconds(messagePause);
         }
     }

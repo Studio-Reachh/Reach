@@ -48,8 +48,14 @@ public class CeillingHole : Interactable
             successfulInteraction = true;
             _hasPlank = true;
 
+            FindObjectOfType<AudioManager>().PlaySound("Item placed right");
+
             AddPlank();
             SaveHandler.SaveLevel(this.name, "HasPlank", true);
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().PlaySound("Item placed wrong");
         }
 
         return successfulInteraction;

@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class Door : Interactable
 {
     private LevelLoader _levelLoader;
+    private bool _isUnlocked;
+    private bool _soundHasPlayed;
 
     [Header("Load Next Level")]
     public string LevelName;
@@ -24,6 +26,24 @@ public class Door : Interactable
         _levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
     }
 
+    private void Update()
+    {
+        if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, KeyGameobject, KeyProperty, out bool isUnlocked))
+        {
+            _isUnlocked = isUnlocked;
+        }
+
+        if (IsDoorLocked )
+        {
+            if (PopupMenu.isPopupOpen && _isUnlocked && !SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, this.name, "SoundHasPlayed", out bool SoundHasPlayed))
+            {
+                FindObjectOfType<AudioManager>().PlaySound("Unlocked");
+
+                SaveHandler.SaveLevel(this.name, "SoundHasPlayed", true);
+            }
+        }
+    }
+
     public override bool Interact(Item item)
     {
         bool succesfullInteraction = false;
@@ -35,18 +55,17 @@ public class Door : Interactable
 
         if (IsDoorLocked)
         {
-            if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, KeyGameobject, KeyProperty, out bool isUnlocked))
+            if (_isUnlocked)
             {
                 if (LevelName != string.Empty)
                 {
-                    FindObjectOfType<AudioManager>().PlaySound("Unlocked");
-
                     _levelLoader.LoadNextLevel(LevelName, PlayCutscene, Audio);
                     succesfullInteraction = true;
-                } else
-                {
-                    FindObjectOfType<AudioManager>().PlaySound("Locked");
-                }
+                } 
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().PlaySound("Locked");
             }
         }
         else

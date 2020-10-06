@@ -16,11 +16,19 @@ public class Keyer : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         _morsecodeMachinePopup.KeyerInput();
         holdDownStartTime = Time.time;
 
-        FindObjectOfType<AudioManager>().PlaySound("Morsecode sound");
+        if (MorsecodeMachine.isMachineActive)
+        {
+            FindObjectOfType<AudioManager>().PlaySound("Morsecode sound");
+        }
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (MorsecodeMachine.isMachineActive)
+        {
+            FindObjectOfType<AudioManager>().StopSound("Morsecode sound");
+        }
+
         float holdDownTime = Time.time - holdDownStartTime;
         _morsecodeMachinePopup.KeyerOutput(holdDownTime);
     }
