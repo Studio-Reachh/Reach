@@ -79,6 +79,11 @@ public class TiltCylinder : MonoBehaviour
 
             if (rayHit.transform != null && (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Ladder") || (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Obstacle") && rayHit.transform.tag == "Barrier") || rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Player")))
             {
+                if (CylinderAnimator)
+                {
+                    CylinderAnimator.speed = 0;
+                }
+
                 return;
             }
         }
@@ -97,7 +102,11 @@ public class TiltCylinder : MonoBehaviour
 
                 if (rayHit.transform != null && (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Ladder") || (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Obstacle") && rayHit.transform.tag == "Barrier") || rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Player")))
                 {
-                    print(rayHit.transform.name);
+                    if (CylinderAnimator)
+                    {
+                        CylinderAnimator.speed = 0;
+                    }
+
                     return;
                 }
             }
