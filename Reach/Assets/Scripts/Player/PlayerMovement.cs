@@ -245,6 +245,7 @@ public class PlayerMovement : MonoBehaviour
                     if (transform.position.x == TargetPosition.x && transform.position.y == TargetPosition.y)
                     {
                         _animator.SetBool("IsWalking", false);
+                        _animator.SetBool("IsClimbing", false);
                         IsMovingOnLadder = false;
                         DestinationReached = true;
 
@@ -274,6 +275,7 @@ public class PlayerMovement : MonoBehaviour
                         if (ClickedOnLadder && IsGameobjectAtPosition(transform.position, "Ladder", out RaycastHit2D raycastHit))
                         {
                             IsMovingOnLadder = true;
+                            _animator.SetBool("IsClimbing", true);
                             if (raycastHit.transform.name.ToLower() == "under")
                             {
                                 //Search for above
