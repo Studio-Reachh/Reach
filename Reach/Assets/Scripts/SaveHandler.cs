@@ -14,6 +14,26 @@ public class SaveHandler : MonoBehaviour
         SaveCurrentSceneName();
     }
 
+    private void OnApplicationFocus(bool focus)
+    {
+        PlayerPrefs.Save();
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        PlayerPrefs.Save();
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.Save();
+    }
+
+    private void OnDisable()
+    {
+        PlayerPrefs.Save();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
@@ -32,6 +52,7 @@ public class SaveHandler : MonoBehaviour
 
         string playerDataJson = JsonConvert.SerializeObject(playerData);
         PlayerPrefs.SetString("PlayerData", playerDataJson);
+        PlayerPrefs.Save();
     }
 
     public static PlayerData GetPlayerData()
@@ -54,6 +75,7 @@ public class SaveHandler : MonoBehaviour
         }
 
         PlayerPrefs.SetString("LastActiveSceneName", SceneManager.GetActiveScene().name);
+        PlayerPrefs.Save();
     }
 
     public static string GetLastActiveSceneName()
@@ -78,6 +100,8 @@ public class SaveHandler : MonoBehaviour
         {
             PlayerPrefs.DeleteKey("Inventory_Items");
         }
+
+        PlayerPrefs.Save();
     }
 
     public static List<Item> GetSavedItemsForInventory()
@@ -136,6 +160,8 @@ public class SaveHandler : MonoBehaviour
             string dataToSafeJson = JsonConvert.SerializeObject(dicToSafe);
             PlayerPrefs.SetString(currentSceneName, dataToSafeJson);
         }
+
+        PlayerPrefs.Save();
     }
 
     public static bool GetValueByProperty<T>(string sceneName, string gameObjectNameOfInteractable, string property, out T value)

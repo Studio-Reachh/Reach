@@ -9,6 +9,8 @@ public class TiltCylinder : MonoBehaviour
     [SerializeField]
     private Transform _leftPos, _rightPos;
 
+    public SpriteRenderer spriteRenderer;
+
     private void Update()
     {
         Vector3 _tiltVector = Input.acceleration;
@@ -37,7 +39,8 @@ public class TiltCylinder : MonoBehaviour
         if (Axis == Axis.Horizontal)
         {
             layerMask = LayerMask.GetMask("Player");
-        } else
+        }
+        else
         {
             layerMask = (1 << LayerMask.NameToLayer("Ladder") | (1 << LayerMask.NameToLayer("Obstacle")));
         }
@@ -47,9 +50,35 @@ public class TiltCylinder : MonoBehaviour
         {
             RaycastHit2D rayHit = rayHitInfo[i];
 
+            if (rayHit.transform.parent.gameObject == this.gameObject)//Check if de root.gameobject werkt
+            {
+                continue;
+            }
+
             if (rayHit.transform != null && (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Ladder") || (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Obstacle") && rayHit.transform.tag == "Barrier") || rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Player")))
             {
+                print(rayHit.transform.name);
                 return;
+            }
+        }
+
+        if (spriteRenderer)
+        {
+            RaycastHit2D[] rayHitInfo2 = Physics2D.RaycastAll(transform.position + new Vector3(0, spriteRenderer.sprite.bounds.size.y / 2f, 0), rayDirection, 1.1f, layerMask);
+            for (int i = 0; i < rayHitInfo2.Length; i++)
+            {
+                RaycastHit2D rayHit = rayHitInfo2[i];
+
+                if (rayHit.transform.parent.gameObject == this.gameObject)//Check if de root.gameobject werkt
+                {
+                    continue;
+                }
+
+                if (rayHit.transform != null && (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Ladder") || (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Obstacle") && rayHit.transform.tag == "Barrier") || rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Player")))
+                {
+                    print(rayHit.transform.name);
+                    return;
+                }
             }
         }
 
@@ -57,8 +86,8 @@ public class TiltCylinder : MonoBehaviour
     }
 }
 
-public enum Axis 
-{ 
-    Horizontal, 
+public enum Axis
+{
+    Horizontal,
     Vertical
 }

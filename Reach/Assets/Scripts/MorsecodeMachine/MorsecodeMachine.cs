@@ -9,7 +9,6 @@ public class MorsecodeMachine : MonoBehaviour
     [Header("Sprites")]
     public Sprite morsecodeMachineActive;
     public SpriteRenderer morsecodeMachineDeactive;
-
     public void Update()
     {
         if (!isMachineActive)

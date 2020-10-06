@@ -57,4 +57,13 @@ public class Inventory : MonoBehaviour
             //All item slots have items
         }
     }
+
+    public static void RemoveItem(Item item)
+    {
+        IEnumerable<ItemSlot> itemSlotsWIthItemToRemove = ItemSlots.Where(i => i.Item == item);
+        foreach (ItemSlot itemSlot in itemSlotsWIthItemToRemove)
+        {
+            itemSlot.RemoveItem();
+        }
+    }
 }
