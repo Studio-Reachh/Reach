@@ -9,6 +9,7 @@ TagManager:
   - Background
   - MorsecodeMachine
   - Barrier
+  - Cylinder
   layers:
   - Default
   - TransparentFX
