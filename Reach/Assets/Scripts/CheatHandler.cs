@@ -41,6 +41,10 @@ public class CheatHandler : MonoBehaviour
         {
             ClearSceneRoom07();
         }
+        else if (currentSceneName == "Room08")
+        {
+            ClearSceneRoom08();
+        }
 
     }
     private void Update()
@@ -203,6 +207,17 @@ public class CheatHandler : MonoBehaviour
         if (movingLadder)
         {
             movingLadder.transform.position = new Vector3(movingLadder._leftPos.position.x, movingLadder.transform.position.y, movingLadder.transform.position.z);
+        }
+    }
+
+    private void ClearSceneRoom08()
+    {
+        CylinderSoundPlayerMachine cylinderSoundPlayerMachine = FindObjectOfType<CylinderSoundPlayerMachine>();
+        if (cylinderSoundPlayerMachine)
+        {
+            cylinderSoundPlayerMachine.HasCylinder = true;
+            cylinderSoundPlayerMachine.ActivateMusic();
+            cylinderSoundPlayerMachine.UseSpriteMachineWithCylinder();
         }
     }
 
