@@ -82,7 +82,6 @@ public class MovingLadder : MonoBehaviour
 
             if (rayHit.transform != null && (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Ladder") || (rayHit.transform.gameObject.layer == LayerMask.NameToLayer("Obstacle") && rayHit.transform.tag == "Barrier")))
             {
-                print(rayHit.transform.name);
                 return;
             }
         }

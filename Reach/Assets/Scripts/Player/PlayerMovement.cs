@@ -118,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _currentSpeed = BaseSpeed;
         }
+
         _spriteRenderer.flipX = FacingDirection == FacingDirection.Left ? true : false;
         if (!LevelLoader.IsLoadingLevel && !IsMovingOnLadder && !ItemSlot.IsDragging && Input.GetKeyDown(KeyCode.Mouse0) && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
         {
@@ -244,8 +245,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (transform.position.x == TargetPosition.x && transform.position.y == TargetPosition.y)
                     {
-                        _animator.SetBool("IsWalking", false);
-                        _animator.SetBool("IsClimbing", false);
                         IsMovingOnLadder = false;
                         DestinationReached = true;
 
@@ -256,6 +255,16 @@ public class PlayerMovement : MonoBehaviour
                             {
                                 ladderDoor.Interact(null);
                             }
+                        }
+
+                        if (!LevelLoader.IsLoadingLevel)
+                        {
+                            _animator.SetBool("IsWalking", false);
+                            _animator.SetBool("IsClimbing", false);
+                        }
+                        else
+                        {
+                            _animator.speed = 0;
                         }
 
                         //if (IsGameobjectAtPosition(transform.position, "Interactable", out RaycastHit2D rayHit))
