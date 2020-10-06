@@ -185,11 +185,6 @@ public class PlayerMovement : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, Mathf.Abs(TargetPosition.x - transform.position.x), LayerMask.GetMask("Obstacle"));
             if (hit)
             {
-                if (hit.distance < 1)
-                {
-                    print(hit.distance);
-                }
-
                 if (rayDirection == Vector2.left)
                 {
                     TargetPosition = new Vector2(hit.point.x + _boxCollider2D.bounds.size.x / 1.88f, TargetPosition.y);
@@ -351,7 +346,6 @@ public class PlayerMovement : MonoBehaviour
         AudioClip randomAudioClip = MovementAudioClips[Random.Range(0, MovementAudioClips.Count - 1)];
         if (randomAudioClip)
         {
-            print("trap");
             AudioSource.clip = randomAudioClip;
             AudioSource.Play();
         }

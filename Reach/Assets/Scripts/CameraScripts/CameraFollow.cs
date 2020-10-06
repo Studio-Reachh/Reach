@@ -18,7 +18,7 @@ public class CameraFollow : MonoBehaviour
     private void Awake()
     {
         _playerMovement = FindObjectOfType<PlayerMovement>();
-        transform.position = new Vector3(_playerMovement.transform.position.x, _playerMovement.transform.position.y, transform.position.z);
+        transform.position = new Vector3(_playerMovement.transform.position.x, _playerMovement.transform.position.y, transform.position.z) + new Vector3(offset.x, offset.y, 0);
     }
 
     private void Update()
