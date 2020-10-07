@@ -31,7 +31,7 @@ public class CheatHandler : MonoBehaviour
         }
         else if (currentSceneName == "Room05")
         {
-
+            ClearSceneRoom05();
         }
         else if (currentSceneName == "Room06")
         {
@@ -40,6 +40,10 @@ public class CheatHandler : MonoBehaviour
         else if (currentSceneName == "Room07")
         {
             ClearSceneRoom07();
+        }
+        else if (currentSceneName == "Room08")
+        {
+            ClearSceneRoom08();
         }
 
     }
@@ -140,6 +144,15 @@ public class CheatHandler : MonoBehaviour
         }
     }
 
+    private void ClearSceneRoom05()
+    {
+        TiltCylinder tiltCylinder = FindObjectOfType<TiltCylinder>();
+        if (tiltCylinder)
+        {
+            Destroy(tiltCylinder.gameObject);
+        }
+    }
+
     private void ClearSceneRoom07()
     {
         DroppedItem leverDroppedItem = FindObjectOfType<DroppedItem>();
@@ -194,6 +207,17 @@ public class CheatHandler : MonoBehaviour
         if (movingLadder)
         {
             movingLadder.transform.position = new Vector3(movingLadder._leftPos.position.x, movingLadder.transform.position.y, movingLadder.transform.position.z);
+        }
+    }
+
+    private void ClearSceneRoom08()
+    {
+        CylinderSoundPlayerMachine cylinderSoundPlayerMachine = FindObjectOfType<CylinderSoundPlayerMachine>();
+        if (cylinderSoundPlayerMachine)
+        {
+            cylinderSoundPlayerMachine.HasCylinder = true;
+            cylinderSoundPlayerMachine.ActivateMusic();
+            cylinderSoundPlayerMachine.UseSpriteMachineWithCylinder();
         }
     }
 

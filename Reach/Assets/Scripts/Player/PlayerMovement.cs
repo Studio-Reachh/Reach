@@ -10,6 +10,9 @@ public enum FacingDirection
 
 public class PlayerMovement : MonoBehaviour
 {
+    public AudioSource AudioSource;
+    public List<AudioClip> MovementAudioClips;
+
     public float BaseSpeed;
     private float _currentSpeed;
 
@@ -115,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _currentSpeed = BaseSpeed;
         }
+
         _spriteRenderer.flipX = FacingDirection == FacingDirection.Left ? true : false;
         if (!LevelLoader.IsLoadingLevel && !IsMovingOnLadder && !ItemSlot.IsDragging && Input.GetKeyDown(KeyCode.Mouse0) && !_animator.GetBool("IsTurning") && !_animator.GetBool("IsGrabbingUp"))
         {
@@ -182,11 +186,6 @@ public class PlayerMovement : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, Mathf.Abs(TargetPosition.x - transform.position.x), LayerMask.GetMask("Obstacle"));
             if (hit)
             {
-                if (hit.distance < 1)
-                {
-                    print(hit.distance);
-                }
-
                 if (rayDirection == Vector2.left)
                 {
                     TargetPosition = new Vector2(hit.point.x + _boxCollider2D.bounds.size.x / 1.88f, TargetPosition.y);
@@ -246,7 +245,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (transform.position.x == TargetPosition.x && transform.position.y == TargetPosition.y)
                     {
-                        _animator.SetBool("IsWalking", false);
                         IsMovingOnLadder = false;
                         DestinationReached = true;
 
@@ -257,6 +255,16 @@ public class PlayerMovement : MonoBehaviour
                             {
                                 ladderDoor.Interact(null);
                             }
+                        }
+
+                        if (!LevelLoader.IsLoadingLevel)
+                        {
+                            _animator.SetBool("IsWalking", false);
+                            _animator.SetBool("IsClimbing", false);
+                        }
+                        else
+                        {
+                            _animator.speed = 0;
                         }
 
                         //if (IsGameobjectAtPosition(transform.position, "Interactable", out RaycastHit2D rayHit))
@@ -276,6 +284,7 @@ public class PlayerMovement : MonoBehaviour
                         if (ClickedOnLadder && IsGameobjectAtPosition(transform.position, "Ladder", out RaycastHit2D raycastHit))
                         {
                             IsMovingOnLadder = true;
+                            _animator.SetBool("IsClimbing", true);
                             if (raycastHit.transform.name.ToLower() == "under")
                             {
                                 //Search for above
@@ -345,6 +354,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void WalkStepParticles(string foot)
     {
+        AudioClip randomAudioClip = MovementAudioClips[Random.Range(0, MovementAudioClips.Count - 1)];
+        if (randomAudioClip)
+        {
+            AudioSource.clip = randomAudioClip;
+            AudioSource.Play();
+        }
+
         //if (_spriteRenderer.flipX)
         //{
         //    if (foot.ToLower() == "left")
