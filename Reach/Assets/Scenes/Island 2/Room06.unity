@@ -221,6 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Axis: 1
   MaxSpeed: 1
+  CylinderAnimator: {fileID: 0}
   _leftPos: {fileID: 441036977}
   _rightPos: {fileID: 1886246610}
   spriteRenderer: {fileID: 0}
@@ -532,7 +533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[5].volume
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[5].pitch
@@ -588,7 +589,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: aac85143b73e1264fa8e0b4a23496ac8, type: 3}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[0].pitch
@@ -600,7 +601,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: c9f85c53d41514c49ad2a27757d5ccdd, type: 3}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[1].pitch
@@ -608,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[2].volume
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[2].pitch
@@ -628,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: f63724e1e9d3d8340ba3e075ca6c7b85, type: 3}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[3].volume
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[3].pitch
@@ -652,7 +653,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[4].volume
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
       propertyPath: sounds.Array.data[4].pitch
@@ -1563,6 +1564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 321913798}
   - component: {fileID: 321913799}
+  - component: {fileID: 321913800}
   m_Layer: 12
   m_Name: Under
   m_TagString: Untagged
@@ -1610,6 +1612,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &321913800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321913797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8047e6ce48335044c8e1292c04822efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseGrabAnimOnInteract: 0
+  LevelName: Room05
+  IsDoorLocked: 0
+  KeyGameobject: 
+  KeyProperty: 
+  PlayCutscene: 0
+  Audio: Ladder
 --- !u!1 &324986651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,7 +2063,6 @@ GameObject:
   m_Component:
   - component: {fileID: 844133463}
   - component: {fileID: 844133465}
-  - component: {fileID: 844133464}
   m_Layer: 12
   m_Name: Ladder03
   m_TagString: Untagged
@@ -2066,25 +2086,6 @@ Transform:
   m_Father: {fileID: 1098478652}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &844133464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844133462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8047e6ce48335044c8e1292c04822efa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseGrabAnimOnInteract: 0
-  LevelName: Room05
-  IsDoorLocked: 0
-  KeyGameobject: 
-  KeyProperty: 
-  PlayCutscene: 0
-  Audio: 
 --- !u!212 &844133465
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2278,6 +2279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 905021514}
   - component: {fileID: 905021515}
+  - component: {fileID: 905021516}
   m_Layer: 12
   m_Name: Above
   m_TagString: Untagged
@@ -2325,6 +2327,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &905021516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905021513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8047e6ce48335044c8e1292c04822efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseGrabAnimOnInteract: 0
+  LevelName: Room07
+  IsDoorLocked: 0
+  KeyGameobject: 
+  KeyProperty: 
+  PlayCutscene: 0
+  Audio: Ladder
 --- !u!1 &944549993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,6 +2476,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 757599141, guid: 851284c57957c5041943a682efe54c2b, type: 3}
+      propertyPath: Priority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 757599141, guid: 851284c57957c5041943a682efe54c2b, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439092, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_Name
       value: Player (Shadow)
@@ -2471,13 +2500,17 @@ PrefabInstance:
       propertyPath: BaseSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6929481858191439098, guid: 851284c57957c5041943a682efe54c2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.64
+      value: 5.84
       objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.95
+      value: -2.6
       objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2653,7 +2686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BarrierStartPositionY: -2.27
   BarrierEndPositionY: 1.52
-  Speed: 0.8
+  Speed: 1
   SlideObjectBackDistance: 0.5
   TiltObject: {fileID: 2102689481}
   Button: {fileID: 842773022}
@@ -2913,7 +2946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BarrierStartPositionY: -2.27
   BarrierEndPositionY: 1.52
-  Speed: 0.8
+  Speed: 1
   SlideObjectBackDistance: 0.5
   TiltObject: {fileID: 2102689481}
   Button: {fileID: 1575437937}
@@ -2984,7 +3017,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1382380370}
   - component: {fileID: 1382380371}
-  - component: {fileID: 1382380372}
   m_Layer: 12
   m_Name: ladder 01
   m_TagString: Untagged
@@ -3059,25 +3091,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1382380372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382380369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8047e6ce48335044c8e1292c04822efa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseGrabAnimOnInteract: 0
-  LevelName: Room07
-  IsDoorLocked: 0
-  KeyGameobject: 
-  KeyProperty: 
-  PlayCutscene: 0
-  Audio: 
 --- !u!1001 &1390858588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4053,6 +4066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Axis: 1
   MaxSpeed: 1
+  CylinderAnimator: {fileID: 0}
   _leftPos: {fileID: 902826327}
   _rightPos: {fileID: 2146321002}
   spriteRenderer: {fileID: 0}
