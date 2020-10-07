@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 91653293}
   m_Layer: 0
   m_Name: topCylinder
-  m_TagString: Untagged
+  m_TagString: Cylinder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: 1
-  MaxSpeed: 4
+  MaxSpeed: 1
   _leftPos: {fileID: 441036977}
   _rightPos: {fileID: 1886246610}
   spriteRenderer: {fileID: 0}
@@ -471,6 +471,979 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &243410092
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: Rolling Cylinder
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[5].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[5].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[6].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[7].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[8].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[8].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: aac85143b73e1264fa8e0b4a23496ac8, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c9f85c53d41514c49ad2a27757d5ccdd, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 07711c7fd7ec8094285ed402148d0e1f, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[2].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f63724e1e9d3d8340ba3e075ca6c7b85, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[3].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[4].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 96a2b57932a583548924f596b187889e, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[9].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[9].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[9].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[10].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[10].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[10].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Ladder
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: Button released
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: Button pressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[11].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[11].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[11].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[12].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[12].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[12].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[13].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[13].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[13].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[14].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[14].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[14].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[14].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[15].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[15].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[15].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[15].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[16].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[16].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[16].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[16].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[17].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[17].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[17].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[17].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[18].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[18].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[18].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[18].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[19].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[19].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[19].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[19].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[20].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[20].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[20].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[20].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[21].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[21].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[21].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[21].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[22].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[22].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[22].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[22].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[23].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[23].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[23].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[23].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[24].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[24].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[24].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[24].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[25].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[25].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[25].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[25].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[26].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[26].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[26].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[26].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[27].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[27].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[27].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[27].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[28].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[28].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[28].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[28].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[29].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[29].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[29].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[29].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[30].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[30].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[30].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[30].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[31].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[31].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[31].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[31].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[32].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[32].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[32].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[32].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[33].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[33].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[33].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[33].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[34].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[34].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[34].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[34].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[35].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[35].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[35].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[35].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[36].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[36].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[36].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[36].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[37].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[37].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[37].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[37].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[38].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[38].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[38].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[38].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[39].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[39].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[39].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[39].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[40].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[40].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[40].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[40].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[41].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[41].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[41].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[41].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[42].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[42].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[42].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[42].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[43].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[43].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[43].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[43].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[44].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[44].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[44].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[44].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[45].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[45].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[45].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[45].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[46].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[46].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[46].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[46].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[47].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[47].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[47].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[47].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[48].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[48].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[48].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[48].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[49].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[49].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[49].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[49].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[50].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[50].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[50].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[50].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[51].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[51].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[51].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[51].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[52].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[52].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[52].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[52].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[53].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[53].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[53].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[53].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[54].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[54].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[54].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[54].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[55].name
+      value: Rope pulley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[55].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97226e5a8aaf4274cadcc946b17874ed, type: 3}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[55].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: sounds.Array.data[55].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876268998431659404, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
 --- !u!1 &258944615
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +1674,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &441036976
 GameObject:
@@ -1204,7 +2177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3085736429949442946, guid: 75093d6471b75514ab85b6285261833a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3085736429949442946, guid: 75093d6471b75514ab85b6285261833a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1433,7 +2406,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &990577107
 GameObject:
@@ -1478,6 +2451,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 453032628, guid: 851284c57957c5041943a682efe54c2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439092, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_Name
       value: Player (Shadow)
@@ -1496,11 +2473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.84
+      value: 4.64
       objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.67
+      value: 1.95
       objectReference: {fileID: 0}
     - target: {fileID: 6929481858191439099, guid: 851284c57957c5041943a682efe54c2b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1675,8 +2652,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BarrierStartPositionY: -2.27
-  BarrierEndPositionY: 1.77
-  Speed: 4
+  BarrierEndPositionY: 1.52
+  Speed: 0.8
   SlideObjectBackDistance: 0.5
   TiltObject: {fileID: 2102689481}
   Button: {fileID: 842773022}
@@ -1935,8 +2912,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BarrierStartPositionY: -2.27
-  BarrierEndPositionY: 1.77
-  Speed: 4
+  BarrierEndPositionY: 1.52
+  Speed: 0.8
   SlideObjectBackDistance: 0.5
   TiltObject: {fileID: 2102689481}
   Button: {fileID: 1575437937}
@@ -2210,7 +3187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5052068168547727030, guid: 47faef42b8d964e4997f0d40f4319dd0, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5052068168547727030, guid: 47faef42b8d964e4997f0d40f4319dd0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2322,111 +3299,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47faef42b8d964e4997f0d40f4319dd0, type: 3}
---- !u!1001 &1567695313
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659402, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.data[5].name
-      value: Open popup
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.data[5].volume
-      value: 0.522
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.data[5].pitch
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.data[5].loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.data[6].name
-      value: Close popup
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.data[6].volume
-      value: 0.522
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.data[6].pitch
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.data[6].loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.data[7].name
-      value: Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.data[7].volume
-      value: 0.522
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659403, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: sounds.Array.data[7].pitch
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876268998431659404, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f84d1a4e898ff124a8086f6ad7fd4985, type: 3}
 --- !u!1 &1575437932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,7 +3969,7 @@ GameObject:
   - component: {fileID: 2102689485}
   m_Layer: 0
   m_Name: bottomCylinder
-  m_TagString: Untagged
+  m_TagString: Cylinder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3180,7 +4052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: 1
-  MaxSpeed: 4
+  MaxSpeed: 1
   _leftPos: {fileID: 902826327}
   _rightPos: {fileID: 2146321002}
   spriteRenderer: {fileID: 0}

@@ -16,6 +16,7 @@ public class LeverPopup : PopupMenu
     {
         if (IsLeverDown)
         {
+            FindObjectOfType<AudioManager>().PlaySound("Lever handle");
             if (LeverDownImage && LeverUpImage)
             {
                 LeverUpImage.SetActive(false);
@@ -26,10 +27,13 @@ public class LeverPopup : PopupMenu
             {
                 LeverInteractable.sprite = LeverDown;
             }
+
             IsLeverDown = false;
+            Barrier.HasSoundPlayed = false;
         }
         else
         {
+            FindObjectOfType<AudioManager>().PlaySound("Lever handle");
             if (LeverDownImage && LeverUpImage)
             {
                 LeverUpImage.SetActive(true);
@@ -41,6 +45,7 @@ public class LeverPopup : PopupMenu
                 LeverInteractable.sprite = LeverUp;
             }
             IsLeverDown = true;
+            Barrier.HasSoundPlayed = false;
         }
 
        
