@@ -4,7 +4,7 @@ public class Button : MonoBehaviour
     private SpriteRenderer _spriterenderer;
 
     [HideInInspector]
-    public bool IsButtonDown;
+    public bool IsButtonDown = false;
 
     [Header("Button Images")]
     public Sprite ButtonPressed;
@@ -17,24 +17,30 @@ public class Button : MonoBehaviour
 
     private void Update()
     {
-        RaycastHit2D[] rayHitInfo = Physics2D.RaycastAll(transform.position, Vector2.up, 2f);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, 2f);
 
-        IsButtonDown = false;
-
-        for (int i = 0; i < rayHitInfo.Length; i++)
+        if (hit.collider != null && !IsButtonDown)
         {
-            RaycastHit2D rayHit = rayHitInfo[i];
+            //change sprite
+            _spriterenderer.sprite = ButtonPressed;
 
-            if (rayHit.collider != null)
-            {
-                _spriterenderer.sprite = ButtonPressed;
-                IsButtonDown = true;
-            }
+            //sound effect
+            FindObjectOfType<AudioManager>().PlaySound("Button pressed");
+
+            IsButtonDown = true;
+            Barrier.HasSoundPlayed = false;
         }
 
-        if (!IsButtonDown)
+        if (hit.collider == null && IsButtonDown)
         {
+            //change sprite
             _spriterenderer.sprite = ButtonUnpressed;
+
+            //sound effect
+            FindObjectOfType<AudioManager>().PlaySound("Button released");
+
+            IsButtonDown = false;
+            Barrier.HasSoundPlayed = false;
         }
     }
 }

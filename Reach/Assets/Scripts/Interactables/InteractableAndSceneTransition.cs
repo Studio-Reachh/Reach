@@ -6,6 +6,7 @@ public class InteractableAndSceneTransition : Interactable
     private SpriteRenderer _spriteRenderer;
     private LevelLoader _levelLoader;
     private bool _hasItem = false;
+    private bool _isUnlocked;
 
     [Header("Item")]
     public string ItemSaveProperty;
@@ -38,6 +39,24 @@ public class InteractableAndSceneTransition : Interactable
         {
             _hasItem = hasItem;
             AddItem();
+        }
+    }
+
+    private void Update()
+    {
+        if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, KeyGameobject, KeyProperty, out bool isUnlocked))
+        {
+            _isUnlocked = isUnlocked;
+        }
+
+        if (IsDoorLocked)
+        {
+            if (_isUnlocked && !SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, this.name, "SoundHasPlayed", out bool SoundHasPlayed))
+            {
+                FindObjectOfType<AudioManager>().PlaySound("Unlocked");
+
+                SaveHandler.SaveLevel(this.name, "SoundHasPlayed", true);
+            }
         }
     }
 
@@ -81,15 +100,13 @@ public class InteractableAndSceneTransition : Interactable
                 {
                     if (LevelName != string.Empty)
                     {
-                        FindObjectOfType<AudioManager>().PlaySound("Unlocked");
-
                         _levelLoader.LoadNextLevel(LevelName, PlayCutscene, Audio);
                         succesfulInteraction = true;
                     }
-                    else
-                    {
-                        FindObjectOfType<AudioManager>().PlaySound("Locked");
-                    }
+                }
+                else
+                {
+                    FindObjectOfType<AudioManager>().PlaySound("Locked");
                 }
             }
             else

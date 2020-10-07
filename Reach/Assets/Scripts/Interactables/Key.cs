@@ -29,6 +29,7 @@ public class Key : MonoBehaviour
     {
         if (collision.gameObject.name == "floor")
         {
+            FindObjectOfType<AudioManager>().PlaySound("Fallen key");
             _hasKeyFallen = true;
         }
     }

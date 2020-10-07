@@ -5,7 +5,6 @@ public class Door : Interactable
 {
     private LevelLoader _levelLoader;
     private bool _isUnlocked;
-    private bool _soundHasPlayed;
 
     [Header("Load Next Level")]
     public string LevelName;
@@ -35,7 +34,7 @@ public class Door : Interactable
 
         if (IsDoorLocked )
         {
-            if (PopupMenu.isPopupOpen && _isUnlocked && !SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, this.name, "SoundHasPlayed", out bool SoundHasPlayed))
+            if (_isUnlocked && !SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, this.name, "SoundHasPlayed", out bool SoundHasPlayed))
             {
                 FindObjectOfType<AudioManager>().PlaySound("Unlocked");
 

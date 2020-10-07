@@ -5,6 +5,8 @@ public class TiltCylinder : MonoBehaviour
     public Axis Axis;
     public float MaxSpeed;
     private float _currentSpeed;
+    private bool _isMoving = false;
+    private bool _isSoundPlaying = false;
 
     public Animator CylinderAnimator;
 
@@ -45,6 +47,7 @@ public class TiltCylinder : MonoBehaviour
 
         float moveTowardsPos_X = transform.position.x;
         Vector2 rayDirection = Vector2.zero;
+
         if (_tiltVector.x < 0)
         {
             moveTowardsPos_X = Vector2.MoveTowards(transform.position, _leftPos.position, Mathf.Abs(_currentSpeed)).x;
@@ -55,6 +58,29 @@ public class TiltCylinder : MonoBehaviour
             moveTowardsPos_X = Vector2.MoveTowards(transform.position, _rightPos.position, Mathf.Abs(_currentSpeed)).x;
             rayDirection = Vector2.right;
         }
+
+        if (_tiltVector.x > 0.2 || _tiltVector.x < -0.2)
+        {
+            _isMoving = true;
+        } else
+        {
+            _isMoving = false;
+        }
+
+        if (_isMoving)
+        {
+            if (!_isSoundPlaying)
+            {
+                FindObjectOfType<AudioManager>().PlaySound("Rolling Cylinder");
+                _isSoundPlaying = true;
+            }
+        } else
+        {
+            FindObjectOfType<AudioManager>().StopSound("Rolling Cylinder");
+            _isSoundPlaying = false;
+        }
+
+        //print(_isMoving);
 
         int layerMask = -1;
 
@@ -83,7 +109,7 @@ public class TiltCylinder : MonoBehaviour
                 {
                     CylinderAnimator.speed = 0;
                 }
-
+                
                 return;
             }
         }

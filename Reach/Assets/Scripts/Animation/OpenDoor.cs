@@ -3,16 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class OpenDoor : MonoBehaviour
 {
-    private bool _isDooropen = false;
-    // Update is called once per frame
     void Update()
     {
-        if (!_isDooropen)
+        if (!SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, name, "IsDoorOpen", out bool IsDoorOpen))
         {
             if (!PopupMenu.isPopupOpen && SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, "Pipe[image]", "HasBeenDelivered", out bool hasBeenDelivered))
             {
                 GetComponent<Animator>().Play("DoorAnimation");
-                _isDooropen = true;
+                FindObjectOfType<AudioManager>().PlaySound("Electric door");
+
+                SaveHandler.SaveLevel(this.name, "IsDoorOpen", true);
             }
         }
     }

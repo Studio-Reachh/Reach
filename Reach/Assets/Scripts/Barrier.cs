@@ -3,6 +3,8 @@
 public class Barrier : MonoBehaviour
 {
     private float _slidbackObject;
+    public static bool HasSoundPlayed = true;
+    public static bool HasSoundPlayedButton = true;
 
     [Header("Barrier Positions Y-axis")]
     public float BarrierStartPositionY;
@@ -38,23 +40,46 @@ public class Barrier : MonoBehaviour
             if (Button.IsButtonDown)
             {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, BarrierEndPositionY), Speed * Time.fixedDeltaTime);
+
+                if (!HasSoundPlayed)
+                {
+                    FindObjectOfType<AudioManager>().PlaySound("Rope pulley");
+                    HasSoundPlayed = true;
+                }
             }
             else
             {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, BarrierStartPositionY), Speed * Time.fixedDeltaTime);
+
+                if (!HasSoundPlayed)
+                {
+                    FindObjectOfType<AudioManager>().PlaySound("Rope pulley");
+                    HasSoundPlayed = true;
+                }
             }
-        } 
+        }
         else
         {
             if (!PopupMenu.isPopupOpen)
             {
-
                 if (LeverPopup.IsLeverDown)
                 {
+                    if (!HasSoundPlayed)
+                    {
+                        FindObjectOfType<AudioManager>().PlaySound("Rope pulley");
+                        HasSoundPlayed = true;
+                    }
+
                     transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, BarrierEndPositionY), Speed * Time.fixedDeltaTime);
                 }
                 else
                 {
+                    if (!HasSoundPlayed)
+                    {
+                        FindObjectOfType<AudioManager>().PlaySound("Rope pulley");
+                        HasSoundPlayed = true;
+                    }
+
                     transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, BarrierStartPositionY), Speed * Time.fixedDeltaTime);
                 }
             }
