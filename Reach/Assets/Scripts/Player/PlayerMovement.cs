@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
             //}
             
             Interactable interactableToMoveTowards = Interactable.GetInteractableAtMousePosition();
-            if (interactableToMoveTowards)
+            if (interactableToMoveTowards && Vector3.Distance(new Vector3(0, transform.position.y, 0), new Vector3(0, interactableToMoveTowards.transform.position.y, 0)) < 6)
             {
                 Collider2D collider = interactableToMoveTowards.GetComponent<Collider2D>();
                 if (collider)

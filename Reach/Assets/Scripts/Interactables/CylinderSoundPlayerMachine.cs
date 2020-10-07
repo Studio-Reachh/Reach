@@ -5,20 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class CylinderSoundPlayerMachine : MonoBehaviour
 {
+    public AudioSource AudioSource;
     public GameObject CylinderToActivateTheMachine;
     public SpriteRenderer Renderer;
     public Sprite SpriteMachineWithCylinder;
     public bool HasCylinder;
 
+    public bool StraigthTubeIsPlaced, CornerTubeIsPlaced;
+
+    public bool MachineIsActivated;
+
     private void Awake()
     {
+        if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, "Corner Pipe (Empty Gameobject)", "CornerPipePlaced", out bool cornerTubeIsPlaced))
+        {
+            CornerTubeIsPlaced = cornerTubeIsPlaced;
+        }
+
+        if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, "Straight Pipe (Empty Gameobject)", "StraightPipePlaced", out bool straightTubeIsPlaced))
+        {
+            StraigthTubeIsPlaced = straightTubeIsPlaced;
+        }      
+
         if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, name, "HasCylinder", out bool hasCylinder))
         {
             HasCylinder = hasCylinder;
         }
 
-        if (HasCylinder)
+        if (HasCylinder && CornerTubeIsPlaced && StraigthTubeIsPlaced)
         {
+            MachineIsActivated = true;
             //Play music
             ActivateMusic();
 
@@ -30,9 +46,26 @@ public class CylinderSoundPlayerMachine : MonoBehaviour
 
     private void Update()
     {
-        if (HasCylinder)
+        if (!MachineIsActivated && HasCylinder && CornerTubeIsPlaced && StraigthTubeIsPlaced)
+        {
+            MachineIsActivated = true;
+            UseSpriteMachineWithCylinder();
+            ActivateMusic();
+        }
+
+        if (MachineIsActivated)
         {
             return;
+        }
+
+        if (!CornerTubeIsPlaced && SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, "Corner Pipe (Empty Gameobject)", "CornerPipePlaced", out bool cornerTubeIsPlaced))
+        {
+            CornerTubeIsPlaced = cornerTubeIsPlaced;
+        }
+
+        if (!StraigthTubeIsPlaced && SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, "Straight Pipe (Empty Gameobject)", "StraightPipePlaced", out bool straightTubeIsPlaced))
+        {
+            StraigthTubeIsPlaced = straightTubeIsPlaced;
         }
 
         RaycastHit2D[] rayHitInfo = Physics2D.RaycastAll(transform.position, Vector2.right, 3f, LayerMask.GetMask("Obstacle"));
@@ -51,13 +84,14 @@ public class CylinderSoundPlayerMachine : MonoBehaviour
                 //Collided with the cylidner that activates this machine
                 HasCylinder = true;
                 UseSpriteMachineWithCylinder();
-                ActivateMusic();
             }
         }
     }
     public void ActivateMusic()
     {
         //Active music here
+        AudioSource.loop = true;
+        AudioSource.Play();
     }
 
     public void UseSpriteMachineWithCylinder()
