@@ -80,8 +80,6 @@ public class TiltCylinder : MonoBehaviour
             _isSoundPlaying = false;
         }
 
-        //print(_isMoving);
-
         int layerMask = -1;
 
         if (Axis == Axis.Horizontal)
