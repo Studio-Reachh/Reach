@@ -216,6 +216,10 @@ public class CheatHandler : MonoBehaviour
         if (cylinderSoundPlayerMachine)
         {
             cylinderSoundPlayerMachine.HasCylinder = true;
+            cylinderSoundPlayerMachine.CornerTubeIsPlaced = true;
+            cylinderSoundPlayerMachine.StraigthTubeIsPlaced = true;
+            cylinderSoundPlayerMachine.MachineIsActivated = true;
+
             cylinderSoundPlayerMachine.ActivateMusic();
             cylinderSoundPlayerMachine.UseSpriteMachineWithCylinder();
         }
