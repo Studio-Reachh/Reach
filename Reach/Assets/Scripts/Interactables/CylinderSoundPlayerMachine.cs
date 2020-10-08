@@ -30,6 +30,7 @@ public class CylinderSoundPlayerMachine : MonoBehaviour
         if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, name, "HasCylinder", out bool hasCylinder))
         {
             HasCylinder = hasCylinder;
+            UseSpriteMachineWithCylinder();
         }
 
         if (HasCylinder && CornerTubeIsPlaced && StraigthTubeIsPlaced)
@@ -101,6 +102,7 @@ public class CylinderSoundPlayerMachine : MonoBehaviour
         if (CylinderToActivateTheMachine)
         {
             Destroy(CylinderToActivateTheMachine);
+            FindObjectOfType<AudioManager>().StopSound("Rolling Cylinder");
         }
     }
 }
