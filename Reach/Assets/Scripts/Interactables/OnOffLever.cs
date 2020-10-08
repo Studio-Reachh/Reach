@@ -8,6 +8,7 @@ public class OnOffLever : Interactable
     public Interactable InteractableToInteractWith;
     public Item LeverItem;
     public bool HasLever;
+    public PopupButton popupButton;
     public SpriteRenderer LeverSpriteRenderer;
 
     public bool IsOn;
@@ -54,11 +55,13 @@ public class OnOffLever : Interactable
                 return false;
             }
 
-            //No item was provided and there is a lever present
-            IsOn = !IsOn;
-            InteractableToInteractWith.Interact(LeverItem);
+            popupButton.Interact(null);
 
-            SetLeverState();
+            ////No item was provided and there is a lever present
+            //IsOn = !IsOn;
+            //InteractableToInteractWith.Interact(LeverItem);
+
+            //SetLeverState();
         }
 
         return successfulInteraction;

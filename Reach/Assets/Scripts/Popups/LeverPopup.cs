@@ -12,6 +12,11 @@ public class LeverPopup : PopupMenu
     public SpriteRenderer LeverInteractable;
     public Sprite LeverUp;
     public Sprite LeverDown;
+
+    public MovingBarrier PatricksMovingBarrierScript;
+    public Item PatricksLeverItem;
+    public OnOffLever PatricksOnOffLever;
+
     public void OnLeverDown()
     {
         if (IsLeverDown)
@@ -30,6 +35,13 @@ public class LeverPopup : PopupMenu
 
             IsLeverDown = false;
             Barrier.HasSoundPlayed = false;
+
+            if (PatricksMovingBarrierScript && PatricksLeverItem)
+            {
+                PatricksMovingBarrierScript.Interact(PatricksLeverItem);
+                PatricksOnOffLever.IsOn = true;
+                PatricksOnOffLever.SetLeverState();
+            }
         }
         else
         {
@@ -44,10 +56,16 @@ public class LeverPopup : PopupMenu
             {
                 LeverInteractable.sprite = LeverUp;
             }
+
             IsLeverDown = true;
             Barrier.HasSoundPlayed = false;
-        }
 
-       
+            if (PatricksMovingBarrierScript && PatricksLeverItem)
+            {
+                PatricksMovingBarrierScript.Interact(PatricksLeverItem);
+                PatricksOnOffLever.IsOn = false;
+                PatricksOnOffLever.SetLeverState();
+            }
+        }   
     }
 }

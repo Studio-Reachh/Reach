@@ -41,7 +41,7 @@ public class MovingLadder : MonoBehaviour
             }
         }
 
-        if (PlayerMovement.IsMovingOnLadder || transform.position == _leftPos.position)
+        if (PopupMenu.isPopupOpen || PlayerMovement.IsMovingOnLadder || transform.position == _leftPos.position)
         {
             return;
         }
