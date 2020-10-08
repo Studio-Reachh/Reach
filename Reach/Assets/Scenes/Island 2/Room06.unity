@@ -2686,7 +2686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BarrierStartPositionY: -2.27
   BarrierEndPositionY: 1.52
-  Speed: 1
+  Speed: 0.4
   SlideObjectBackDistance: 0.5
   TiltObject: {fileID: 2102689481}
   Button: {fileID: 842773022}
@@ -2946,7 +2946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BarrierStartPositionY: -2.27
   BarrierEndPositionY: 1.52
-  Speed: 1
+  Speed: 0.4
   SlideObjectBackDistance: 0.5
   TiltObject: {fileID: 2102689481}
   Button: {fileID: 1575437937}
