@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private float _currentSpeed;
 
     public bool ClickedOnLadder = false;
-    public bool IsMovingOnLadder = false;
+    public static bool IsMovingOnLadder = false;
 
     public bool DestinationReached = false;
 
