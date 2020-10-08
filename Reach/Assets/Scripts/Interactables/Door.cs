@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class Door : Interactable
 {
     private LevelLoader _levelLoader;
-    private bool _isUnlocked;
+    public bool IsUnlocked;
 
     [Header("Load Next Level")]
     public string LevelName;
@@ -29,12 +29,12 @@ public class Door : Interactable
     {
         if (SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, KeyGameobject, KeyProperty, out bool isUnlocked))
         {
-            _isUnlocked = isUnlocked;
+            IsUnlocked = isUnlocked;
         }
 
-        if (IsDoorLocked )
+        if (IsDoorLocked)
         {
-            if (_isUnlocked && !SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, this.name, "SoundHasPlayed", out bool SoundHasPlayed))
+            if (IsUnlocked && !SaveHandler.GetValueByProperty(SceneManager.GetActiveScene().name, this.name, "SoundHasPlayed", out bool SoundHasPlayed))
             {
                 FindObjectOfType<AudioManager>().PlaySound("Unlocked");
 
@@ -54,7 +54,7 @@ public class Door : Interactable
 
         if (IsDoorLocked)
         {
-            if (_isUnlocked)
+            if (IsUnlocked)
             {
                 if (LevelName != string.Empty)
                 {

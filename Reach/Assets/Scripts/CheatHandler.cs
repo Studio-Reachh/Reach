@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class CheatHandler : MonoBehaviour
+public class CheatHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField]
-    private DeliveryPipe _deliveryPipe;
+    private DeliveryTubeReceived deliveryTubeReceived;
+    public GameObject Room05TubePopupGameObject;
+
     public void ClearWholeScene()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
@@ -35,7 +38,7 @@ public class CheatHandler : MonoBehaviour
         }
         else if (currentSceneName == "Room06")
         {
-
+            ClearSceneRoom06();
         }
         else if (currentSceneName == "Room07")
         {
@@ -45,14 +48,11 @@ public class CheatHandler : MonoBehaviour
         {
             ClearSceneRoom08();
         }
-
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
+        else if (currentSceneName == "Room09")
         {
-            ClearWholeScene();
+            ClearSceneRoom09();
         }
+
     }
 
     #region Island 1 rooms
@@ -137,10 +137,14 @@ public class CheatHandler : MonoBehaviour
             Inventory.RemoveItem(deliveryTube.ItemNeeded);
         }
 
-        if (_deliveryPipe)
+        if (deliveryTubeReceived)
         {
-            SaveHandler.SaveLevel("Pipe[image]", "HasBeenDelivered", true);
-            Destroy(_deliveryPipe.gameObject);
+            deliveryTubeReceived.HasCollided = true;
+        }
+
+        if (Room05TubePopupGameObject)
+        {
+            Room05TubePopupGameObject.SetActive(true);
         }
     }
 
@@ -150,6 +154,15 @@ public class CheatHandler : MonoBehaviour
         if (tiltCylinder)
         {
             Destroy(tiltCylinder.gameObject);
+        }
+    }
+
+    private void ClearSceneRoom06()
+    {
+        GameObject barriersGO = GameObject.Find("Barriers");
+        if (barriersGO)
+        {
+            Destroy(barriersGO);
         }
     }
 
@@ -223,6 +236,44 @@ public class CheatHandler : MonoBehaviour
             cylinderSoundPlayerMachine.ActivateMusic();
             cylinderSoundPlayerMachine.UseSpriteMachineWithCylinder();
         }
+    }
+
+    private void ClearSceneRoom09()
+    {
+        InteractableAndSceneTransition endDoor = FindObjectOfType<InteractableAndSceneTransition>();
+        if (endDoor)
+        {
+            endDoor.IsDoorLocked = false;
+            endDoor.Interact(null);
+        }
+    }
+
+    private float currentHoldItem = 0;
+    private float maxHoldTime = 2.5f;
+    private bool isOnMouseDown;
+
+    private void Update()
+    {
+        if (isOnMouseDown)
+        {
+            currentHoldItem += Time.deltaTime;
+            if (currentHoldItem >= maxHoldTime)
+            {
+                ClearWholeScene();
+                currentHoldItem = 0;
+                isOnMouseDown = false;
+            }
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        isOnMouseDown = true;
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        isOnMouseDown = false;
     }
 
     #endregion

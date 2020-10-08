@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class DeliveryTubeReceived : MonoBehaviour
 {
-    private bool _hasCollided;
+    public bool HasCollided;
     private bool _hasBeenDelivered;
 
     public GameObject GameobjectToReceive;
@@ -28,12 +28,12 @@ public class DeliveryTubeReceived : MonoBehaviour
             return;
         }
 
-        if (!_hasCollided && Vector2.Distance(transform.position, GameobjectToReceive.transform.position) < DistanceForCollision)
+        if (!HasCollided && Vector2.Distance(transform.position, GameobjectToReceive.transform.position) < DistanceForCollision)
         {
-            _hasCollided = true;
+            HasCollided = true;
         }
 
-        if (_hasCollided)
+        if (HasCollided)
         {
             FindObjectOfType<AudioManager>().PlaySound("Item placed right");
             SaveHandler.SaveLevel("Pipe[image]", "HasBeenDelivered", true);
